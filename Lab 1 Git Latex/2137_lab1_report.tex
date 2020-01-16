@@ -77,8 +77,6 @@ Answer questions posed in the lab assignment here.
 
 
 \section*{Results}
-
-In this section, put your simulation waveforms, results tables, pictures of hardware, and any other required items.
 \begin{figure}[ht]\centering
 	\begin{tabular}{l|r|r}
 		Binary & Hex & Decimal \\
@@ -90,15 +88,25 @@ In this section, put your simulation waveforms, results tables, pictures of hard
 		1000 & 8 & 8  \\
 		1010 & A & 10  \\
 		\bottomrule
-	\end{tabular}\medskip			
+	\end{tabular}\medskip
+			
 	\includegraphics[width=1\textwidth,trim={19cm 15cm 0cm 3.5cm},clip]{lab1_example_screenshot (1).PNG}
-		\caption{Table and simulation waveform Reproduced}
+		\caption{ERT of Table and Simulation Waveform Reproduced}
 		\label{fig:original_logo}
+		
+		\includegraphics[width=1\textwidth,trim={0cm 9cm 0cm 0cm},clip]{githistory.PNG}
+		\caption{Figure 2: Screenshot of Git History}
 \end{figure}
-
+\clearpage
 \section*{Code}
 
-Include all of the code you wrote or modified here.
+module example_or(
+input a, b,
+output c
+);
 
+// c = a OR b
+or(c,a,b);	
+endmodule
 
 \end{document}
