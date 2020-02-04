@@ -1,0 +1,138 @@
+% Digital Logic Report Template
+% Created: 2020-01-10, John Miller
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+
+
+
+%======================================================
+%=========== Body  ====================================
+\begin{document}
+
+\title{ELC 2137 Lab 3: Adder}
+\author{Jake Simmons and Haonan Jin}
+
+\maketitle
+
+
+\section*{Summary}
+
+In this lab, we first built a half adder and with it drew a schematic and wiring diagram. Then we tested it to see if its behaviour matched the half adder truth diagram. Next we built a full adder and with it drew a schemtaic and wiring diagram. Then we tested this one as well to see if its behaviour matched the full adder truth diagram. Lastly, we created a two bit adder. We did this by combining two full adders then checked to see if its behaviour matched the two bit adder truth table.  
+
+
+\section*{Q\&A}
+
+\begin{enumerate}
+	\item Which gates could we use for combining the carry bits?
+	\begin{enumerate}
+		\item The gates we could use for combining the carry bits are XOR, AND Gates.
+	\end{enumerate}
+    \item Which one should we use and why?
+    \begin{enumerate}
+    	\item We should use the XOR Gate, because in binary when you add two ones together, the output will give you a zero with an one carried over. A XOR Gate, when inputted with two ones the output is zero which is same when you add two ones in binary. Also in a XOR Gate if one and zero is inputted a one is outputted which is the same when you add a one and zero in binary. If we were to use the AND Gate to add two binary numbers, one plus one would output one which in binary is not correct.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\section*{Results}
+
+\begin{center}
+	\caption{Table1: Proof carry outputs of the first and second stage HAs cannot be high at the same time}
+	\begin{tabular}{ccc|ccc|cc}
+		\toprule
+		Cin&A& B & C1 & S1 & C2 & Cout & S \\
+		\midrule
+		0&0&0&0&0&0&0&0 \\
+		0&0&1&0&1&0&0&1 \\
+		0&1&0&0&1&0&0&1 \\
+		0&1&1&1&0&0&1&0 \\
+	    1&0&0&0&0&0&0&1 \\
+		1&0&1&0&1&1&1&0 \\
+		1&1&0&0&1&1&1&0 \\
+		1&1&1&1&0&0&1&1 \\
+		\bottomrule
+		\end{tabular}\medskip
+	\end{center}
+\begin{center}
+	\begin{figure}
+		\includegraphics[width=1\textwidth]{Scan_1.pdf}
+		\caption{Schematics and Wiring Diagram of the Half and Full Adder}
+		\end{figure}
+	\end{center}
+\begin{center}
+	\begin{figure}
+		\includegraphics[width=.6\textwidth]{Image.jpeg}
+		\caption{Picture of the Half Adder}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+		\includegraphics[width=.6\textwidth]{Image1.jpeg}
+		\caption{Picture of the Full Adder}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+		\includegraphics[width=.6\textwidth]{Image2.jpeg}
+		\caption{Picture of the 2-Bit Adder}
+	\end{figure}
+\end{center}
+
+\clearpage
+\section*{Code}
+
+
+
+\end{document}
