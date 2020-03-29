@@ -12,7 +12,7 @@ begin
     if (rst==1) 
         Q <= 0'b0 ; 
     else if (en==1) 
-        Q <= 1'b1 ; 
+        Q <= D ; 
 end
 // Notes: // - Reset is asynchronous , so this 
 // block needs to execute when rst 
