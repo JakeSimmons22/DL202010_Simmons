@@ -17,6 +17,6 @@ module ALU_Test();
         in0 = 8'd1; in1 = 8'd2; op = 2; #10;
         in0 = 8'd3; in1 = 8'd4; op = 3; #10;
         in0 = 8'd5; in1 = 8'd6; op = 4; #10;
-        in0 = 8'd20; in1 = 8'd25; op = 5; #10;
+        in0 = 8'd15; in1 = 8'd12; op = 5; #10;
         end
 endmodule
