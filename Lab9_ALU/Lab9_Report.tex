@@ -79,20 +79,21 @@ Answer questions posed in the lab assignment here.
 \section*{Results}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
+	\begin{tabular}{l|rrrrrrrrrrr}
+		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40 & 40-45 & 45-50 & 50-55 \\
 		\midrule
-		a & 0 & 1 & 0 & 1 \\
-		b & 0 & 0 & 1 & 1 \\
-		\midrule
-		c & 0 & 0 & 0 & 1 \\
-		s & 0 & 1 & 1 & 0 \\
+		D (hex) & 0 & 0 & A & A & 3 & 3 & 0 & 0 & 0$\rightarrow$6 & 6 & 6 \\
+		clk & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0  \\
+		en & 0 & 0 & 1 & 1 & 1$\rightarrow$0 & 0$\rightarrow$1 & 1$\rightarrow$0 & 0 & 0$\rightarrow$1 & 1 & 1 \\
+		rst & 0 & 0$\rightarrow$1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\midrule 
+		Q (hex) & X & X$\rightarrow$0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics{sim_waveform}
-	\caption{Example of a simulation waveform and ERT}
-	\label{fig:sim_with_table}
+%	\includegraphics{sim_waveform}
+%	\caption{Example of a simulation waveform and ERT}
+%	\label{fig:sim_with_table}
 \end{figure}
 
 
