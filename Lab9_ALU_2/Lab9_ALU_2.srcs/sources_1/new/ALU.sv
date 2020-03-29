@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-/ELC 2137 Jake Simmons 2020-3-29
+//ELC 2137 Jake Simmons 2020-3-29
 
 module ALU#(parameter N=8) 
     ( 
@@ -14,11 +14,15 @@ parameter SUB=1;
 parameter AND=2; 
 parameter OR=3; 
 parameter XOR=4;
+
 always @* 
 begin 
     case(op) 
-        ADD: destination = in0 + in1; 
-        // add the remaining commands 
+        ADD: out = in0 + in1; 
+        SUB: out = in0 + in1;
+        AND: out = in0 + in1;
+        OR:  out = in0 + in1;
+        XOR: out = in0 + in1;
         default: out = in0; 
      endcase 
   end
