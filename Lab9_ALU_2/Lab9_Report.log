@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  30 MAR 2020 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  30 MAR 2020 17:31
 entering extended mode
 **./Lab9_Report.tex
 (Lab9_Report.tex
@@ -319,7 +319,11 @@ nd-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count267
 \l__pdf_internal_box=\box48
-) (Lab9_Report.aux)
+) (Lab9_Report.aux
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+)
 \openout1 = `Lab9_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -437,22 +441,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 82.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
- [1
+<register_test.JPG, id=3, 813.79031pt x 169.88469pt>
+File: register_test.JPG Graphic file (type jpg)
+<use register_test.JPG>
+Package pdftex.def Info: register_test.JPG  used on input line 94.
+(pdftex.def)             Requested size: 813.78833pt x 169.88426pt.
 
-{C:/Users/School/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (344.03331pt too wide) in paragraph at lines 94--95
+ [][] 
+ []
+
+<ALU_test.JPG, id=4, 911.15407pt x 104.89188pt>
+File: ALU_test.JPG Graphic file (type jpg)
+<use ALU_test.JPG>
+Package pdftex.def Info: ALU_test.JPG  used on input line 111.
+(pdftex.def)             Requested size: 422.77664pt x 48.67017pt.
+[1
+
+{C:/Users/School/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./register
+_test.JPG>] [2 <./ALU_test.JPG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+ [3
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (Lab9_Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `Lab9_Report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 8176 strings out of 481556
- 124043 string characters out of 2913401
- 405615 words of memory out of 3000000
- 23305 multiletter control sequences out of 15000+200000
+ 8192 strings out of 481556
+ 124291 string characters out of 2913401
+ 405711 words of memory out of 3000000
+ 23316 multiletter control sequences out of 15000+200000
  536894 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,9n,37p,1202b,308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -462,9 +489,9 @@ public/amsfonts/cm/cmr10.pfb><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/School/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/School/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Lab9_Report.pdf (1 page, 63445 bytes).
+Output written on Lab9_Report.pdf (3 pages, 437571 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
