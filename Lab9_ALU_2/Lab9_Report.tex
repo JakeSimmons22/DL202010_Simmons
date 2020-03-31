@@ -118,76 +118,74 @@ Answer questions posed in the lab assignment here.
 \section*{Code}
 
 \begin{lstlisting}[style=Verilog,
-caption=Direct Verilog code example,
+caption=Register Module,
 label=code:ex 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-26
 
 module register_2 #(parameter N=1) 
-(
-input clk, rst, en, 
-input [N-1:0] D, 
-output reg [N-1:0] Q 
-);
-always @(posedge clk, posedge rst) 
-begin       
-if (rst==1) 
-Q <= 0'b0 ; 
-else if (en==1) 
-Q <= D ; 
-end
-// Notes: // - Reset is asynchronous , so this 
-// block needs to execute when rst 
-// goes high.
-// - We want enable to be synchronous 
-// (i.e. only happens on rising 
-// edge of clk), so it is left out 
-// of "sensitivity" list.
-
+	(
+	input clk, rst, en, 
+	input [N-1:0] D, 
+	output reg [N-1:0] Q 
+	);
+	always @(posedge clk, posedge rst) 
+		begin       
+			if (rst==1) 
+				Q <= 0'b0 ; 
+			else if (en==1) 
+				Q <= D ; 
+	end
+	// Notes: // - Reset is asynchronous , so this 
+	// block needs to execute when rst 
+	// goes high.
+	// - We want enable to be synchronous 
+	// (i.e. only happens on rising 
+	// edge of clk), so it is left out 
+	// of "sensitivity" list.
 endmodule
 
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=Direct Verilog code example,
+caption=ALU Module,
 label=code:ex 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-29
 
 module ALU#(parameter N=8) 
-( 
-output reg[N-1:0] out, 
-input [N-1:0] in0, 
-input [N-1:0] in1, 
-input [3:0] op 
-);
-// Local parameters 
-parameter ADD=0; 
-parameter SUB=1; 
-parameter AND=2; 
-parameter OR=3; 
-parameter XOR=4;
+	( 
+	output reg[N-1:0] out, 
+	input [N-1:0] in0, 
+	input [N-1:0] in1, 
+	input [3:0] op 
+	);
+	// Local parameters 
+	parameter ADD=0; 
+	parameter SUB=1; 
+	parameter AND=2; 
+	parameter OR=3; 
+	parameter XOR=4;
 
-always @* 
-begin 
-case(op) 
-ADD: out = in0 + in1; 
-SUB: out = in0 - in1;
-AND: out = in0 & in1;
-OR:  out = in0 | in1;
-XOR: out = in0 ^ in1;
-default: out = in0; 
-endcase 
-end
-
+	always @* 
+		begin 
+			case(op) 
+				ADD: out = in0 + in1; 
+				SUB: out = in0 - in1;
+				AND: out = in0 & in1;
+				OR:  out = in0 | in1;
+				XOR: out = in0 ^ in1;
+				default: out = in0; 
+			endcase 
+		end
 endmodule
 
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=Direct Verilog code example,
+caption=Lab 9 Top Module,
 label=code:ex 
 ]
 `timescale 1ns / 1ps
@@ -195,35 +193,32 @@ label=code:ex
 
 
 module top_lab9(
-input btnU,
-input btnD,
-input [11:0] sw,
-input clk,
-input btnC,
-output [15:0] led
-);
-wire [7:0] W1;
-wire [7:0] W2;
+	input btnU,
+	input btnD,
+	input [11:0] sw,
+	input clk,
+	input btnC,
+	output [15:0] led
+	);
+	wire [7:0] W1;
+	wire [7:0] W2;
 
-register_2 #(.N(8)) r1( .D(sw[7:0]), .en(btnD), .clk(clk), .Q(W1), .rst(btnC)
-);
+	register_2 #(.N(8)) r1( .D(sw[7:0]), .en(btnD), .clk(clk), .Q(W1), .rst(btnC)
+	);
 
-ALU alu( .in1(W1), .in0(sw[7:0]), .op(sw[11:8]), .out(W2)
+	ALU alu( .in1(W1), .in0(sw[7:0]), .op(sw[11:8]), .out(W2)
+	);
 
-);
+	register_2 #(.N(8)) r2( .D(W2), .en(btnU), .clk(clk), .rst(btnC), .Q(led[15:8])
+	);
 
-register_2 #(.N(8)) r2( .D(W2), .en(btnU), .clk(clk), .rst(btnC), .Q(led[15:8])
-
-);
-
-assign led [7:0] = W1;
-
+	assign led [7:0] = W1;
 endmodule
 
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=Direct Verilog code example,
+caption=Register Module Test Code,
 label=code:ex 
 ]
 `timescale 1ns / 1ps
@@ -231,59 +226,59 @@ label=code:ex
 
 module register_2_test();
 
-reg [3:0] D;
-reg clk, en, rst; 
-wire [3:0] Q;
-register_2 #(.N(4)) r(.D(D), .clk(clk), 
-.en(en), .rst(rst), .Q(Q) );
+	reg [3:0] D;
+	reg clk, en, rst; 
+	wire [3:0] Q;
+	register_2 #(.N(4)) r(.D(D), .clk(clk), 
+	.en(en), .rst(rst), .Q(Q) );
 
-// clock runs continuously 
-always begin 
-clk = ~clk; #5; 
-end
-// this block only runs once 
-initial begin
-clk = 0; en = 0; rst = 0; D = 4'h0; #7;
-rst = 1; #3; // reset 
-D = 4'hA; en = 1; rst = 0; #10; 
-D = 4'h3; #2; 
-en = 0; #5; 
-en = 1; #3;
-D = 4'h0; #2; 
-en = 0; #10; 
-en = 1; #2; 
-D = 4'h6; #11;
-$finish;
-end
+	// clock runs continuously 
+	always begin 
+		clk = ~clk; #5; 
+	end
+	// this block only runs once 
+	initial begin
+		clk = 0; en = 0; rst = 0; D = 4'h0; #7;
+		rst = 1; #3; // reset 
+		D = 4'hA; en = 1; rst = 0; #10; 
+		D = 4'h3; #2; 
+		en = 0; #5; 
+		en = 1; #3;
+		D = 4'h0; #2; 
+		en = 0; #10; 
+		en = 1; #2; 
+		D = 4'h6; #11;
+		$finish;
+	end
 endmodule
 
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=Direct Verilog code example,
+caption=ALU Module Test Code,
 label=code:ex 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-29
 
 module ALU_Test();
-reg [7:0] in0;
-reg [7:0] in1;
-reg [7:0] op;
-wire [7:0] out;
+	reg [7:0] in0;
+	reg [7:0] in1;
+	reg [7:0] op;
+	wire [7:0] out;
 
-ALU alu(
-.in0(in0), .in1(in1), .op(op), .out(out)
-);
-initial 
-begin
-in0 = 8'd5; in1 = 8'd5; op = 0; #10;
-in0 = 8'd10; in1 = 8'd5; op = 1; #10;
-in0 = 8'd1; in1 = 8'd2; op = 2; #10;
-in0 = 8'd3; in1 = 8'd4; op = 3; #10;
-in0 = 8'd5; in1 = 8'd6; op = 4; #10;
-in0 = 8'd15; in1 = 8'd12; op = 5; #10;
-end
+	ALU alu(
+	.in0(in0), .in1(in1), .op(op), .out(out)
+	);
+	initial 
+		begin
+			in0 = 8'd5; in1 = 8'd5; op = 0; #10;
+			in0 = 8'd10; in1 = 8'd5; op = 1; #10;
+			in0 = 8'd1; in1 = 8'd2; op = 2; #10;
+			in0 = 8'd3; in1 = 8'd4; op = 3; #10;
+			in0 = 8'd5; in1 = 8'd6; op = 4; #10;
+			in0 = 8'd15; in1 = 8'd12; op = 5; #10;
+		end
 endmodule
 \end{lstlisting}
 
