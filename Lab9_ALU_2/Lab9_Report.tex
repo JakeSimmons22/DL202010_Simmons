@@ -60,6 +60,7 @@
 %=========== Body  ====================================
 \begin{document}
 
+
 \title{ELC 2137 Lab 9: ALU}
 \author{Jake Simmons}
 
@@ -90,7 +91,7 @@ The purpose of this lab was to create an Arithmetic Logic Unit capable of operat
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics{register_test.JPG}
+	\includegraphics[width=0.9\textwidth]{register_test.JPG}
 	\caption{ERT and Simultion Waveforms of Register}
 	\label{fig:sim_with_table}
 \end{figure}
@@ -125,7 +126,7 @@ The purpose of this lab was to create an Arithmetic Logic Unit capable of operat
 
 \begin{lstlisting}[style=Verilog,
 caption=Register Module,
-label=code:ex 
+label=register 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-26
@@ -156,7 +157,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,
 caption=ALU Module,
-label=code:ex 
+label=ALU 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-29
@@ -192,7 +193,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,
 caption=Lab 9 Top Module,
-label=code:ex 
+label=Top
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-30
@@ -225,7 +226,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,
 caption=Register Test Bench Code,
-label=code:ex 
+label=Register_Test
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-26
@@ -262,7 +263,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,
 caption=ALU Test Bench Code,
-label=code:ex 
+label=ALU_Test 
 ]
 `timescale 1ns / 1ps
 //ELC 2137 Jake Simmons 2020-3-29
