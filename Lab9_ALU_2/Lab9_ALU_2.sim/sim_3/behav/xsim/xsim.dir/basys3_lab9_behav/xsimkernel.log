@@ -2,3 +2,6 @@ Running: xsim.dir/basys3_lab9_behav/xsimk.exe -simmode gui -wdb basys3_lab9_beha
 Design successfully loaded
 Design Loading Memory Usage: 8512 KB (Peak: 8512 KB)
 Design Loading CPU Usage: 187 ms
+Simulation completed
+Simulation Memory Usage: 9092 KB (Peak: 9092 KB)
+Simulation CPU Usage: 187 ms
