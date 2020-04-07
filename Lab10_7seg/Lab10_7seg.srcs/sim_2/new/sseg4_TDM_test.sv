@@ -27,7 +27,7 @@ sseg4_TDM sseg4( .clock(clock), .rst(rst), .data(data), .hex_dec(hex_dec),
 
 always begin 
 
-    clock = ~clock; #5; 
+    clock = ~clock; #10; 
 
 end
 
@@ -35,11 +35,10 @@ end
 
 initial begin
 
-    clock = 0; rst = 0; #7;
-
-    rst = 1; #3; // reset 
-
-    rst = 0; #10; 
+    data = 0; hex_dec = 0; rst = 0; clock = 0; sign = 0; #20;
+    data = 1; hex_dec = 0; rst = 0; clock = 1; sign = 0; #20;
+    data = 2; hex_dec = 0; rst = 0; clock = 2; sign = 0; #20;
+    data = 3; hex_dec = 0; rst = 0; clock = 3; sign = 0; #20;
 
 
       $finish;
