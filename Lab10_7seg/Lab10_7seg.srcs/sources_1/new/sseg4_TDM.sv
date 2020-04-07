@@ -2,13 +2,15 @@
 //ELC 2137 2020-4-7
 
 module sseg4_TDM(
-     input [15:0] data,
+    input clock,
+    
+    input rst,
+    
+    input [15:0] data,
 
     input hex_dec,
 
     input sign,
-
-    input [1:0] digit_sel,
 
     output [6:0] seg,
 
@@ -17,7 +19,8 @@ module sseg4_TDM(
     output [3:0] an
 
     );
-
+    wire [1:0] digit_sel;
+    
     wire [15:0] W1 ;
 
     wire [15:0] W2 ;
@@ -29,7 +32,13 @@ module sseg4_TDM(
     wire [3:0] W5;
 
     wire W6;
-
+    
+    wire [1:0] W7;
+    
+    Counter #(.N(18)) timer( .clock(clk), .tick(W7), .en(1'd0));
+    
+    Counter #(.N(2)) counter2( .clk(W7), .count(digit_sel), .en(1'd0) );
+    
     BCD11_2 B1( .in11(data[10:0]), .out11(W1));
 
     mux2 #(.N(16)) B2( .in0(W1), .in1(data), .sel(hex_dec), .out(W2));
