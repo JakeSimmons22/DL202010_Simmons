@@ -21,7 +21,7 @@ module Counter #(parameter N=1)
     always @* 
         begin 
             if (en) 
-                Q_next = clk; 
+                Q_next = 1; 
             else 
                 Q_next = Q_reg; // no change 
         end
