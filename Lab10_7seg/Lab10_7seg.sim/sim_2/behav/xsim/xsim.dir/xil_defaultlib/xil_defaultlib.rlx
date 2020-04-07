@@ -1,0 +1,14 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/BCD11_2.sv,1585077031,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/Counter.sv,,BCD11_2,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/annode_decoder.sv,1585003997,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux2.sv,,annode_decoder,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux2.sv,1585003997,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux4.sv,,mux2,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux4.sv,1585003997,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/sseg4_TDM.sv,,mux4,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/add3_2.sv,1585003997,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/annode_decoder.sv,,add3_2,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/sseg_decoder.sv,1585003997,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sim_2/new/sseg4_TDM_test.sv,,sseg_decoder,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sim_2/new/sseg4_TDM_test.sv,1586297395,systemVerilog,,,,sseg4_TDM_test,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/Counter.sv,1586294820,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/add3_2.sv,,Counter,,,,,,,,
+C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/sseg4_TDM.sv,1586297660,systemVerilog,,C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/sseg_decoder.sv,,sseg4_TDM,,,,,,,,

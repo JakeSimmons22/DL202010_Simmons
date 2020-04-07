@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr  7 17:14:33 2020
+# Process ID: 26056
+# Current directory: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim/xsim.dir/sseg4_TDM_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim/webtalk.log
+# Journal file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.sim/sim_2/behav/xsim/xsim.dir/sseg4_TDM_test_behav/webtalk/xsim_webtalk.tcl -notrace

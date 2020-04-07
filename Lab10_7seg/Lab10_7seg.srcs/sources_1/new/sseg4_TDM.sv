@@ -35,9 +35,9 @@ module sseg4_TDM(
     
     wire [1:0] W7;
     
-    Counter #(.N(18)) timer( .clock(clk), .tick(W7), .en(1'd0));
+    Counter #(.N(18)) timer( .clk(clock), .tick(W7), .en(1'b1), .rst(rst));
     
-    Counter #(.N(2)) counter2( .clk(W7), .count(digit_sel), .en(1'd0) );
+    Counter #(.N(2)) counter2( .clk(W7), .count(digit_sel), .en(1'b1), .rst(rst) );
     
     BCD11_2 B1( .in11(data[10:0]), .out11(W1));
 
