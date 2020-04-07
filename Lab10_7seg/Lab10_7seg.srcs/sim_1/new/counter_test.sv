@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
-
+//ELC 2137 2020-7-4
 
 module counter_test();
-    reg [3:0] D;
     reg clk, en, rst; 
-    wire [3:0] Q;
+    wire [3:0] W1;
+    wire W2;
 
-Counter #(.N(4)) count(.D(D), .clk(clk), 
+Counter #(.N(4)) count(.tick(W2), .clk(clk), 
 
-    .en(en), .rst(rst), .Q(Q) );
+    .en(en), .rst(rst), .count(W1) );
 
     
 
@@ -24,25 +24,21 @@ end
 
 initial begin
 
-    clk = 0; en = 0; rst = 0; D = 4'h0; #7;
+    clk = 0; en = 0; rst = 0; #7;
 
     rst = 1; #3; // reset 
 
-    D = 4'hA; en = 1; rst = 0; #10; 
+    en = 1; rst = 0; #10; 
 
-    D = 4'h3; #2; 
 
     en = 0; #5; 
 
     en = 1; #3;
 
-    D = 4'h0; #2; 
-
     en = 0; #10; 
 
     en = 1; #2; 
 
-    D = 4'h6; #11;
 
       $finish;
 
