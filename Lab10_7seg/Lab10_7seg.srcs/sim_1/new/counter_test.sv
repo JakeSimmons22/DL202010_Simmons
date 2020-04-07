@@ -6,7 +6,7 @@ module counter_test();
     wire [3:0] W1;
     wire W2;
 
-Counter #(.N(4)) count(.tick(W2), .clk(clk), 
+Counter #(.N(4)) count1( .tick(W2), .clk(clk), 
 
     .en(en), .rst(rst), .count(W1) );
 
@@ -32,6 +32,20 @@ initial begin
 
 
     en = 0; #5; 
+
+    en = 1; #3;
+
+    en = 0; #10; 
+
+    en = 1; #2; 
+      en = 0; #5; 
+
+    en = 1; #3;
+
+    en = 0; #10; 
+
+    en = 1; #2; 
+      en = 0; #5; 
 
     en = 1; #3;
 
