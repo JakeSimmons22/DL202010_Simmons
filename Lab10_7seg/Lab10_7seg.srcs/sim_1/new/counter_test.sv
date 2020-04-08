@@ -30,7 +30,6 @@ initial begin
 
     en = 1; rst = 0; #10; 
 
-
     en = 0; #5; 
 
     en = 1; #3;
@@ -38,14 +37,16 @@ initial begin
     en = 0; #10; 
 
     en = 1; #2; 
-      en = 0; #5; 
+   
+    en = 0; #5; 
 
     en = 1; #3;
 
     en = 0; #10; 
 
     en = 1; #2; 
-      en = 0; #5; 
+    
+    en = 0; #5; 
 
     en = 1; #3;
 
