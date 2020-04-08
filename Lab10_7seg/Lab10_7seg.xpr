@@ -164,6 +164,18 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/btnC.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/btnD.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
