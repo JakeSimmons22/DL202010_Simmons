@@ -24,7 +24,7 @@ end
 
 initial begin
 
-     en = 0; rst = 0; #7;
+    clk = 0; en = 0; rst = 0; #7;
      rst = 1; #3; // reset 
      en = 1; rst = 0; #10; 
      en = 0; #5; 
