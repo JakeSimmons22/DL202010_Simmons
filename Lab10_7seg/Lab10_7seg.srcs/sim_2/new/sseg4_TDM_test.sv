@@ -3,19 +3,12 @@
 
 module sseg4_TDM_test();
     reg clock;
-    
     reg reset;
-    
     reg [15:0] data;
-
     reg hex_dec;
-
     reg sign;
-
     wire [6:0] seg;
-
     wire dp;
-
     wire [3:0] an;
 
 sseg4_TDM sseg4( .clock(clock), .reset(reset), .data(data), .hex_dec(hex_dec),
