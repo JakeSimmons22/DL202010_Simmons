@@ -4,7 +4,7 @@
 module sseg4_TDM(
     input clock,
     
-    input rst,
+    input reset,
     
     input [15:0] data,
 
@@ -35,9 +35,9 @@ module sseg4_TDM(
     
     wire [1:0] W7;
     
-    Counter #(.N(18)) timer( .clk(clock), .tick(W7), .en(1'b1), .rst(rst));
+    Counter #(.N(18)) timer( .clk(clock),.en(1'b1), .tick(W7), .rst(reset));
     
-    Counter #(.N(2)) counter2( .clk(W7), .count(digit_sel), .en(1'b1), .rst(rst) );
+    Counter #(.N(2)) counter2( .clk(W7),.en(1'b1),.count(digit_sel), .rst(reset) );
     
     BCD11_2 B1( .in11(data[10:0]), .out11(W1));
 
@@ -54,6 +54,5 @@ module sseg4_TDM(
     annode_decoder B7( .in(digit_sel), .out(W5));
 
     assign dp = 1;
-
     assign an = W5;
 endmodule

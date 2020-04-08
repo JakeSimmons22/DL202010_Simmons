@@ -4,7 +4,7 @@
 module sseg4_TDM_test();
     reg clock;
     
-    reg rst;
+    reg reset;
     
     reg [15:0] data;
 
@@ -18,7 +18,7 @@ module sseg4_TDM_test();
 
     wire [3:0] an;
 
-sseg4_TDM sseg4( .clock(clock), .rst(rst), .data(data), .hex_dec(hex_dec),
+sseg4_TDM sseg4( .clock(clock), .reset(reset), .data(data), .hex_dec(hex_dec),
     .sign(sign), .seg(seg), .dp(dp), .an(an));
 
     
@@ -27,7 +27,7 @@ sseg4_TDM sseg4( .clock(clock), .rst(rst), .data(data), .hex_dec(hex_dec),
 
 always begin 
 
-    clock = ~clock; #10; 
+    clock = ~clock; #2621440; 
 
 end
 
@@ -35,10 +35,10 @@ end
 
 initial begin
 
-    data = 0; hex_dec = 0; rst = 0; clock = 0; sign = 0; #20;
-    data = 1; hex_dec = 0; rst = 0; clock = 1; sign = 0; #20;
-    data = 2; hex_dec = 0; rst = 0; clock = 2; sign = 0; #20;
-    data = 3; hex_dec = 0; rst = 0; clock = 3; sign = 0; #20;
+    data = 0; hex_dec = 0; reset = 0; clock = 0; sign = 0; #10;
+    data = 1; hex_dec = 0; reset = 0; clock = 1; sign = 0; #10;
+    data = 2; hex_dec = 0; reset = 0; clock = 2; sign = 0; #10;
+    data = 3; hex_dec = 0; reset = 0; clock = 3; sign = 0; #10;
 
 
       $finish;
