@@ -11,8 +11,8 @@ module calc_lab10(
     input [11:0] sw,
     input clk,
     input btnC,
-    output [15:0] Led,
-    ouput [6:0] seg,
+    output [15:0] led,
+    output [6:0] seg,
     output dp,
     output [3:0] an
     );
@@ -24,7 +24,7 @@ module calc_lab10(
      .seg(seg), .dp(dp), .an(an));
     
     top_lab9 calc_unit( .btnU(btnU), .btnD(btnD), .sw(sw),
-    .clk(clk), .btnC(btnc), .Led({W2[15:8], W1[7:0]}) );
+    .clk(clk), .btnC(btnc), .led({W1[7:0], W2[15:8]}) );
     
-    assign Led[7:0] = W1;
+    assign led[7:0] = W1;
 endmodule
