@@ -48,14 +48,11 @@ initial begin
     en = 0; #10; 
     clk = 1; en = 1; #2; 
     en = 0; #10; 
-
-     clk = 1; en = 1; #3; 
-      en = 0; #10; 
-
-     clk = 1; en = 1; #2; 
-      en = 0; #10; 
-
-     clk = 1; en = 1; #3; 
+    clk = 1; en = 1; #3; 
+    en = 0; #10; 
+    clk = 1; en = 1; #2; 
+    en = 0; #10; 
+    clk = 1; en = 1; #3; 
 
       $finish;
 
