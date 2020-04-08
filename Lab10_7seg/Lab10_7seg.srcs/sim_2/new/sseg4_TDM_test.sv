@@ -27,8 +27,7 @@ end
 // this block only runs once 
 
 initial begin
-    //clock = 18'b000000000000000000;
-    data = 0; hex_dec = 0; reset = 1; sign = 0; #2621440;
+    data = 0; hex_dec = 0; reset = 1;  clock = 0; sign = 0; #2621440;
     data = 1; hex_dec = 1; reset = 0;  sign = 0; #2621440;
     data = 2; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 3; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
@@ -37,7 +36,7 @@ initial begin
     data = 6; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 7; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 8; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-    data = 9; hex_dec = 1; reset = 0; sign = 0;  #2621440;
+    data = 9; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 10; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 11; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 12; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
