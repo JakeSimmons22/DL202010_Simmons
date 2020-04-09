@@ -3,7 +3,6 @@
 
 module calc_lab10(
     input hex_dec,
-    input reset,
     input [17:0] clock,
     input sign,
     input btnU,
@@ -20,7 +19,7 @@ module calc_lab10(
     wire [7:0] W2;
     
     sseg4_TDM disp_unit( .data({W2, 8'b00000000}), .hex_dec(hex_dec),
-     .reset(reset), .clock(clock), .sign(sign), 
+     .reset(btnC), .clock(clock), .sign(sign), 
      .seg(seg), .dp(dp), .an(an));
     
     top_lab9 calc_unit( .btnU(btnU), .btnD(btnD), .sw(sw),
