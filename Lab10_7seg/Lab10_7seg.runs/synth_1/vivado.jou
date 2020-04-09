@@ -9,3 +9,4 @@
 # Log file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.runs/synth_1/calc_lab10.vds
 # Journal file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
+source calc_lab10.tcl -notrace
