@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-Type the summary of your experiment and results here.  
+
 
 
 \section*{Q\&A}
@@ -78,19 +78,18 @@ Type the summary of your experiment and results here.
 		\begin{enumerate}
 			\item 	The three main groups of the RTL definitions of sequential logic is event driven, clock driven and pulse driven. 
 		\end{enumerate}
-\end{enumerate}
-
-\begin{enumerate}
+	
 	\item Copy Figure 10.3b onto your own paper (or do it electronically) and draw three boxes around the components that belong to each group. Include your annotated ﬁgure in your report.
-	\begin{enumerate}
-		\item 
-	\end{enumerate}
-\end{enumerate}
+	
+	\begin{figure}[ht]\centering
+		\caption{10.3B Labeling}
+		\includegraphics[trim={8.8cm 5cm 0cm 14cm},clip]{10.3_b.pdf}
+		\label{fig:picture}
+	\end{figure}
 
-\begin{enumerate}
-	\item(c) If instead of a counter, you wanted to make a shift register that moved the input bits from right to left (low to high). What would you put on the line Q next = /*???*/
+	\item If instead of a counter, you wanted to make a shift register that moved the input bits from right to left (low to high). What would you put on the line Q next = /*???*/
 	\begin{enumerate}
-		\item To make a shift register that moved bits from right to left, you would put on the line Q next = 
+		\item To make a shift register that moved bits from right to left, you would put on the line Q next = Q reg + 4'd3;
 	\end{enumerate}
 \end{enumerate}
 
