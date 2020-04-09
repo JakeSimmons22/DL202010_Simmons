@@ -35,12 +35,17 @@ initial begin
     data = 5; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 6; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
     data = 7; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-    data = 8; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-    data = 9; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-    data = 10; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
-    data = 11; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
-    data = 12; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
-    data = 13; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
+    data = 8; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
+    data = 9; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
+    data = 10; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
+    data = 11; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
+    data = 12; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
+    data = 13; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
+    data = 14; hex_dec = 0; reset = 0;  sign = 0;  #2621440;
+    data = 15; hex_dec = 0; reset = 0;  sign = 0;  #2621440;
+ 
+
+
 
 
       $finish;
