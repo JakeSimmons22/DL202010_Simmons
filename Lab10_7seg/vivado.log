@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Apr  9 17:47:39 2020
+# Process ID: 6024
+# Current directory: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24020 C:\Users\School\Documents\GitHub\DL202010_Simmons\Lab10_7seg\Lab10_7seg.xpr
+# Log file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/vivado.log
+# Journal file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/School/Desktop/led.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/School/Desktop/sseg.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:18 . Memory (MB): peak = 712.367 ; gain = 98.195
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 17:49:08 2020...
