@@ -12,8 +12,8 @@ module sseg4_TDM(
     output [3:0] an
     );
     wire [1:0] digit_sel;    
-    wire [15:0] W1 ;
-    wire [15:0] W2 ;
+    wire [15:0] W1;
+    wire [15:0] W2;
     wire [3:0] W3;
     wire [6:0] W4;
     wire [3:0] W5;
