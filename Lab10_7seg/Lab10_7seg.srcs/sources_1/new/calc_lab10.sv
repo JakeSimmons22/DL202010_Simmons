@@ -2,7 +2,7 @@
 //ELC 2137 Jake Simmons 2020-4-8
 
 module calc_lab10(
-    input [17:0] clk,
+    input clk,
     input btnU,
     input btnD,
     input [15:0] sw,
