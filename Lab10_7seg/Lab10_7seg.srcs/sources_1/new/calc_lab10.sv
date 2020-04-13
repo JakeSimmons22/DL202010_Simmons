@@ -13,14 +13,14 @@ module calc_lab10(
     output [3:0] an
     );
     wire [7:0] W1;
-    wire [7:0] W2;
+   // wire [7:0] W2;
     
-    sseg4_TDM disp_unit( .data({W2, 8'b00000000}), .hex_dec(sw[15]),
+    sseg4_TDM disp_unit( .data({W1, 8'b00000000}), .hex_dec(sw[15]),
      .reset(btnC), .clock(clk), .sign(sw[14]), 
      .seg(seg), .dp(dp), .an(an));
     
     top_lab9 calc_unit( .btnU(btnU), .btnD(btnD), .sw(sw[11:0]),
-    .clk(clk[1:0]), .btnC(btnC), .led({W1, W2}) );
+    .clk(clk), .btnC(btnC), .led(led) );
     
-    assign led[7:0] = W1;
+    assign W1 = led[15:8];
 endmodule
