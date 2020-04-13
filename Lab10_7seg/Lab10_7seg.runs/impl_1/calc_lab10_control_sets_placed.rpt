@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Apr 13 11:52:52 2020
+| Date         : Mon Apr 13 11:59:25 2020
 | Host         : DESKTOP-9OU7RV8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file calc_lab10_control_sets_placed.rpt
 | Design       : calc_lab10
@@ -50,7 +50,7 @@ Table of Contents
 | No           | No                    | Yes                    |              20 |            6 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              16 |            5 |
+| Yes          | No                    | Yes                    |              16 |            3 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -62,8 +62,8 @@ Table of Contents
 |     Clock Signal     | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------------+---------------+------------------+------------------+----------------+
 |  disp_unit/timer/CLK |               | btnC_IBUF        |                1 |              2 |
-|  clk_IBUF_BUFG[0]    | btnU_IBUF     | btnC_IBUF        |                2 |              8 |
-|  clk_IBUF_BUFG[0]    | btnD_IBUF     | btnC_IBUF        |                3 |              8 |
+|  clock_IBUF_BUFG[0]  | btnD_IBUF     | btnC_IBUF        |                2 |              8 |
+|  clock_IBUF_BUFG[0]  | btnU_IBUF     | btnC_IBUF        |                1 |              8 |
 |  clk_IBUF_BUFG[0]    |               | btnC_IBUF        |                5 |             18 |
 +----------------------+---------------+------------------+------------------+----------------+
 
