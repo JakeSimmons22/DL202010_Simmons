@@ -13,7 +13,6 @@ module calc_lab10(
     output [3:0] an
     );
     wire [7:0] W1;
-   // wire [7:0] W2;
     
     sseg4_TDM disp_unit( .data({W1, 8'b00000000}), .hex_dec(sw[15]),
      .reset(btnC), .clock(clk), .sign(sw[14]), 
