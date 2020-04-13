@@ -20,10 +20,10 @@ module sseg4_TDM(
     wire W6;    
     wire [1:0] W7;
     
-    Counter #(.N(18)) timer( .clk(clock),.en(1'b1), .tick(W7), .rst(reset));  
+    Counter #(.N(18)) timer( .clk(clock), .en(1'b1), .tick(W7), .rst(reset));  
     Counter #(.N(2)) counter2( .clk(W7),.en(1'b1),.count(digit_sel), .rst(reset) );    
     BCD11_2 B1( .in11(data[10:0]), .out11(W1));
-    mux2 #(.N(16)) B2( .in0(data), .in1(W1), .sel(hex_dec), .out(W2));
+    mux2 #(.N(16)) B2( .in0(W1), .in1(data), .sel(hex_dec), .out(W2));
     mux4 B3( .in0(W2[3:0]), .in1(W2[7:4]), .in2(W2[11:8]), .in3(W2[15:12]), .sel(digit_sel), .out(W3));
     sseg_decoder B5( .num(W3), .sseg(W4));
     mux2 #(.N(7)) B6( .in0(W4), .in1(7'b0111111), .out(seg) , .sel(W6));
