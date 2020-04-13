@@ -31,16 +31,16 @@ set_property ip_output_repo c:/Users/School/Documents/GitHub/DL202010_Simmons/La
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab9_ALU_2/Lab9_ALU_2.srcs/sources_1/new/ALU.sv
-  {C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/BCD11_2.sv}
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/BCD11_2.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/Counter.sv
-  C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/add3_2.sv
-  {C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/annode_decoder.sv}
-  {C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux2.sv}
-  {C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/mux4.sv}
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/new/add3_2.sv
+  {C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/GitHub/DL202010_JCSJ/Lab 8/Lab 8.srcs/sources_1/new/annode_decoder.sv}
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/new/mux2.sv
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/new/mux4.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab9_ALU_2/Lab9_ALU_2.srcs/sources_1/new/register_2.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/sseg4_TDM.sv
-  C:/Users/School/Documents/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/sseg_decoder.sv
-  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab9_ALU_2/Lab9_ALU_2.srcs/sources_1/new/top_lab9.sv
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/GitHub/DL202010_JCSJ/Lab7_2/Lab7_2.srcs/sources_1/new/sseg_decoder.sv
+  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/imports/GitHub/DL202010_Simmons/Lab9_ALU_2/Lab9_ALU_2.srcs/sources_1/new/top_lab9.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/sources_1/new/calc_lab10.sv
 }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -51,23 +51,26 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/School/Desktop/led.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Desktop/led.xdc]
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnC.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnC.xdc]
 
-read_xdc C:/Users/School/Desktop/sseg.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Desktop/sseg.xdc]
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnD.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnD.xdc]
 
-read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnC.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnC.xdc]
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnU.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnU.xdc]
 
-read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnD.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnD.xdc]
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/clock.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/clock.xdc]
 
-read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnU.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnU.xdc]
+read_xdc {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/led.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/led.xdc}}]
 
-read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/clock.xdc
-set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/clock.xdc]
+read_xdc {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/sseg.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/sseg.xdc}}]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/Lab10_7seg/switches.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/Lab10_7seg/switches.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

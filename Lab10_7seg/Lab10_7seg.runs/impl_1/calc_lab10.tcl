@@ -74,12 +74,13 @@ set rc [catch {
   set_property ip_output_repo C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.runs/synth_1/calc_lab10.dcp
-  read_xdc C:/Users/School/Desktop/led.xdc
-  read_xdc C:/Users/School/Desktop/sseg.xdc
-  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnC.xdc
-  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnD.xdc
-  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/btnU.xdc
-  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/clock.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnC.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnD.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/btnU.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Lab10_7seg/clock.xdc
+  read_xdc {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/led.xdc}}
+  read_xdc {{C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/DL202010_Simmons/Support Docs/sseg.xdc}}
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.srcs/constrs_1/imports/Lab10_7seg/switches.xdc
   link_design -top calc_lab10 -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
