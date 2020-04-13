@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Apr 13 16:45:41 2020
-# Process ID: 25288
+# Start of session at: Mon Apr 13 17:07:12 2020
+# Process ID: 17436
 # Current directory: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.runs/synth_1
 # Command line: vivado.exe -log calc_lab10.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calc_lab10.tcl
 # Log file: C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab10_7seg/Lab10_7seg.runs/synth_1/calc_lab10.vds

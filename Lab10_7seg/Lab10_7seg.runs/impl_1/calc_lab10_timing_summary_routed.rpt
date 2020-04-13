@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Apr 13 16:48:22 2020
+| Date         : Mon Apr 13 17:10:48 2020
 | Host         : DESKTOP-9OU7RV8 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file calc_lab10_timing_summary_routed.rpt -pb calc_lab10_timing_summary_routed.pb -rpx calc_lab10_timing_summary_routed.rpx -warn_on_violation
 | Design       : calc_lab10
