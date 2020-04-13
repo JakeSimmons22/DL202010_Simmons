@@ -3,6 +3,7 @@
 
 module calc_lab10(
     input [17:0] clk,
+    input [1:0] clock,
     input btnU,
     input btnD,
     input [15:0] sw,
@@ -20,7 +21,7 @@ module calc_lab10(
      .seg(seg), .dp(dp), .an(an));
     
     top_lab9 calc_unit( .btnU(btnU), .btnD(btnD), .sw(sw[11:0]),
-    .clk(clk[1:0]), .btnC(btnC), .led({W1, W2}) );
+    .clk(clock), .btnC(btnC), .led({W1, W2}) );
     
     assign led[7:0] = W1;
 endmodule
