@@ -214,6 +214,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/constrs_1/imports/Lab10_7seg/switches.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/switches.xdc"/>
+          <Attr Name="ImportTime" Val="1586794947"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
