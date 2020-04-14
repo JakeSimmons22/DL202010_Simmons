@@ -3,12 +3,12 @@
 
 module counter_test();
     reg clk, en, rst; 
-    wire [3:0] W1;
-    wire W2;
+    wire [3:0] Count;
+    wire tick;
 
-Counter #(.N(4)) count1( .tick(W2), .clk(clk), 
+Counter #(.N(4)) count1( .tick(tick), .clk(clk), 
 
-    .en(en), .rst(rst), .count(W1) );
+    .en(en), .rst(rst), .count(Count) );
 
     
 
