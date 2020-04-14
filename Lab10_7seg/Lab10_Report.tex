@@ -89,7 +89,7 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 
 	\item If instead of a counter, you wanted to make a shift register that moved the input bits from right to left (low to high). What would you put on the line Q next = /*???*/
 	\begin{enumerate}
-		\item To make a shift register that moved bits from right to left, you would put on the line Q next = Q reg + 4'd8;
+		\item To make a shift register that moved bits from right to left, you would put on the line Q next = Q reg - 1;
 	\end{enumerate}
 \end{enumerate}
 
@@ -110,7 +110,8 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.15 \textwidth]{Counter_Test.JPG}
+	\includegraphics[trim={0cm 0cm 12.5cm 0cm},clip]{Counter_Test.JPG}
+	\includegraphics[trim={14cm 0cm 0cm 0cm},clip]{Counter_Test.JPG}
 	\caption{Counter simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
@@ -130,14 +131,15 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.15 \textwidth]{sseg4_TDM_Test.JPG}
+	\includegraphics[trim={0cm 0cm 12.5cm 0cm},clip]{sseg4_TDM_Test.JPG}
+	\includegraphics[trim={17.5cm 0cm 0cm 0cm},clip]{sseg4_TDM_Test.JPG}
 	\caption{sseg4TDM simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
 	\caption{sseg4TDM Schematic}
-	\includegraphics[width=1.05\textwidth]{sseg4_TDM_Schematic.jpeg}
+	\includegraphics[trim={0cm 0cm 12.5cm 0cm},clip]{sseg4_TDM_Schematic.jpeg}
 	\label{fig:picture}
 \end{figure}
 
