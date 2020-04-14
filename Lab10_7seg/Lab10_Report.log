@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  14 APR 2020 09:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  14 APR 2020 09:47
 entering extended mode
 **./Lab10_Report.tex
 (Lab10_Report.tex
@@ -488,18 +488,18 @@ Overfull \hbox (70.46037pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
-<sseg4_TDM_Schematic.pdf, id=36, 574.145pt x 759.83875pt>
-File: sseg4_TDM_Schematic.pdf Graphic file (type pdf)
-<use sseg4_TDM_Schematic.pdf>
-Package pdftex.def Info: sseg4_TDM_Schematic.pdf  used on input line 140.
-(pdftex.def)             Requested size: 540.2154pt x 714.95576pt.
+<sseg4_TDM_Schematic.jpeg, id=36, 3035.34pt x 4047.12pt>
+File: sseg4_TDM_Schematic.jpeg Graphic file (type jpg)
+<use sseg4_TDM_Schematic.jpeg>
+Package pdftex.def Info: sseg4_TDM_Schematic.jpeg  used on input line 140.
+(pdftex.def)             Requested size: 493.2442pt x 657.61835pt.
 
-Overfull \hbox (70.46037pt too wide) in paragraph at lines 140--142
+Overfull \hbox (23.48918pt too wide) in paragraph at lines 140--142
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 98.85909pt on input line 142.
+LaTeX Warning: Float too large for page by 41.52167pt on input line 142.
 
 <calc_lab10_Schematic.pdf, id=37, 574.145pt x 759.83875pt>
 File: calc_lab10_Schematic.pdf Graphic file (type pdf)
@@ -516,8 +516,8 @@ LaTeX Warning: Float too large for page by 98.85909pt on input line 148.
 
 [3
 
- <./Counter_Test.JPG> <./sseg4_TDM_Test.JPG>] [4 <./sseg4_TDM_Schematic.pdf>] [
-5 <./calc_lab10_Schematic.pdf>]
+ <./Counter_Test.JPG> <./sseg4_TDM_Test.JPG>] [4 <./sseg4_TDM_Schematic.jpeg>] 
+[5 <./calc_lab10_Schematic.pdf>]
 ("C:\Users\School\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1
 .sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -566,9 +566,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9053 strings out of 481556
- 134855 string characters out of 2913401
- 719619 words of memory out of 3000000
+ 9054 strings out of 481556
+ 134841 string characters out of 2913401
+ 719617 words of memory out of 3000000
  23898 multiletter control sequences out of 15000+200000
  537359 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -581,9 +581,9 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/School/AppData/Local/Programs
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Sch
 ool/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 >
-Output written on Lab10_Report.pdf (10 pages, 1177398 bytes).
+Output written on Lab10_Report.pdf (10 pages, 2621602 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
+ 410 PDF objects out of 1000 (max. 8388607)
  267 named destinations out of 1000 (max. 500000)
  32 words of extra memory for PDF output out of 10000 (max. 10000000)
 
