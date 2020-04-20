@@ -1,9 +1,9 @@
 //ELC 2137, Jake Simmons, 2020-04-20
-module guess_FSM_test();
+module debounce_test();
     reg clk, reset , in;
     wire out, tick;
     integer i;
-    guess_FSM #(.N(2)) guess (.clk(clk), . reset(reset) 
+    debounce #(.N(2)) db (.clk(clk), . reset(reset) 
     , .in(in), .out(out), .tick(tick));
     always begin 
         #5 clk = ~clk; 
@@ -26,3 +26,4 @@ module guess_FSM_test();
 end
 
 endmodule
+
