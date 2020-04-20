@@ -10,4 +10,24 @@ module guess_FSM (
     output win,
     output lose
 );
+    reg[1:0] state;
+    reg swin, slose;
+
+always @*
+    begin
+        //state zero
+        if(~b & state == 2'b11) 
+            assign y[0] = 1'b1;
+        else if(~b & swin == 1'b1)
+            assign y[0] = 1'b1;
+        else(~b & slose == 1'b1)
+            assign y[0] = 1'b1;
+       //state one
+       //state two
+       //state three
+   end
+        
+         
+    
+    
 endmodule
