@@ -3,7 +3,7 @@ module guess_FSM_test();
     reg clk, reset , in;
     wire out, tick; 
     integer i;
-    debounce #(.N(2)) db (.clk(clk), . reset(reset), .in(in), .out(out), .tick(tick));
+    guess_FSM #(.N(2)) guess (.clk(clk), . reset(reset), .in(in), .out(out), .tick(tick));
     always begin 
         #5 clk = ~clk; 
     end
