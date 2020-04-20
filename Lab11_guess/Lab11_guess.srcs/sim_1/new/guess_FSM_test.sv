@@ -1,26 +1,27 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/20/2020 05:05:48 PM
-// Design Name: 
-// Module Name: guess_FSM_test
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+//ELC 2137, Jake Simmons, 2020-04-20
+module guess_FSM_test();
+    reg clk, reset , in;
+    wire out, tick; 
+    integer i;
+    debounce #(.N(2)) db (.clk(clk), . reset(reset), .in(in), .out(out), .tick(tick));
+    always begin 
+        #5 clk = ~clk; 
+    end
+    initial begin 
+        clk=0; reset=0; in=0; #5; 
+        reset=1; #10; 
+        reset=0; #5; // bounce 
+        for (i=0; i<10; i=i+1) begin 
+            #20 in=~in; 
+         end
+         // hold input = 1 for a while 
+         in = 1; #200; // bounce 
+         for (i=0; i<10; i=i+1) begin 
+            #20 in=~in; 
+         end 
+         // hold input = 0 for a while 
+         in = 0; #200; 
+   $finish;
+end
 
-
-module guess_FSM_test(
-
-    );
 endmodule
