@@ -67,5 +67,5 @@ initial begin
     b = 0; #10; //S0
     
     
-end
+    end
 endmodule
