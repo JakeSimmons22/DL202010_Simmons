@@ -11,7 +11,6 @@ module guess_FSM #(parameter N=19)(
     output reg lose
     );
     
-    
     //states
     localparam [2:0]
         S0 = 3'b000,

@@ -8,7 +8,7 @@ module guess_FSM_test();
     wire win, lose;
     
 guess_FSM gs( .clk(clk), .b(b), .reset(reset), .y(y), .win(win),
-    .lose(lose) );
+    .lose(lose), );
 
 always begin
     clk = ~clk; #10;
@@ -26,8 +26,8 @@ initial begin
     b = 0; #10; //S0
     b = 1; #10; //SWIN
     b = 2; #10; //SWIN
-    
-    b = 0; #10; //S0
+  
+    b = 0; #10 //S0;
     b = 2; #10; //SLOSE
     b = 1; #10; //SLOSE
     
