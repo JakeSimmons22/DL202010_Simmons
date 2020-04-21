@@ -24,7 +24,7 @@ initial begin
     b = 0; #10; //S3
     
     b = 0; #10; //S0
-    b = 1; #10; //SWIN
+    b = 1; #20; //SWIN
     b = 2; #10; //SWIN
   
     b = 0; #10 //S0;
