@@ -4,11 +4,11 @@ module guess_FSM_test();
     
     reg clk, reset;
     reg [3:0] b;
-    wire [4:0] y;
+    wire [3:0] y;
     wire win, lose;
     
 guess_FSM gs( .clk(clk), .b(b), .reset(reset), .y(y), .win(win),
-    .lose(lose), );
+    .lose(lose) );
 
 always begin
     clk = ~clk; #10;
