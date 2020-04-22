@@ -32,10 +32,14 @@ module guessing_game(
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
+    //top
     assign seg[0] = ~W4[0];
+    //right
     assign seg[1] = ~W4[1];
     assign seg[4:2] = 3'b111;
+    //left
     assign seg[5] = ~W4[3];
+    //bottom
     assign seg[6] = ~W4[2];
     
     //win
