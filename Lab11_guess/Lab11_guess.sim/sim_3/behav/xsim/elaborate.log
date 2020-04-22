@@ -5,8 +5,6 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:43]
 WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'clk' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:45]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:47]
-WARNING: [VRFC 10-3283] element index 17 into 'led' is out of bounds [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:64]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -15,7 +13,6 @@ Compiling module xil_defaultlib.debounce
 Compiling module xil_defaultlib.Counter(N=18)
 Compiling module xil_defaultlib.mux2(N=18)
 Compiling module xil_defaultlib.guess_FSM
-Compiling module xil_defaultlib.mux4
 Compiling module xil_defaultlib.guessing_game
 Compiling module xil_defaultlib.guessing_game_test
 Compiling module xil_defaultlib.glbl
