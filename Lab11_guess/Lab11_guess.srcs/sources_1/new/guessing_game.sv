@@ -24,7 +24,7 @@ module guessing_game(
     reg [1:0] Sel = 0;
     always_ff @(posedge clk)begin
         if(clk) begin
-            if(Sel > 2) begin
+            if(Sel > 3) begin
               Sel = 0;
             end
             else begin
