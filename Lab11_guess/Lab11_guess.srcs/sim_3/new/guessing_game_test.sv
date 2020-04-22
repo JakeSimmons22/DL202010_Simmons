@@ -8,7 +8,7 @@ module guessing_game_test();
     reg btnL;
     reg btnC;
     reg clk;
-    reg [15:0]sw;
+    reg sw;
     wire [6:0] seg;
     wire [3:0] an;
     wire [15:0] led; 
@@ -22,25 +22,25 @@ always begin
 end
 
 initial begin
-    clk = 0; btnC = 0; btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
+    clk = 0; btnC = 0; btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
     btnC = 1; #10;
     btnC = 0; # 10;
-    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw[0] = 0; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 0; #10;
-    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw[0] = 1; #10;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw[0] = 1; #10;
+    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
   
 end
 endmodule
