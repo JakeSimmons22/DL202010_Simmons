@@ -16,19 +16,21 @@ module guessing_game(
     );
     
     wire [3:0] W1;
-    wire [17:0] W2;
+    wire [24:0] W2;
     wire  [15:0] W3;
     wire [3:0] W4;
     wire W5, W6;
+    wire [20:0] W7;
     
-    debounce d1( .in(btnU), .out(W1[3]));
-    debounce d2( .in(btnD), .out(W1[2]));
-    debounce d3( .in(btnL), .out(W1[1]));
-    debounce d4( .in(btnR), .out(W1[0]));
+    debounce d1( .in(btnU), .tick(W1[3]));
+    debounce d2( .in(btnD), .tick(W1[2]));
+    debounce d3( .in(btnL), .tick(W1[1]));
+    debounce d4( .in(btnR), .tick(W1[0]));
     
-    Counter #(.N(18)) count( .clk(clk), .en(1'b1), .count(W2) );
+    Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2) );
+    Counter #(.N(21)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
-    mux2 #(.N(18)) m( .in1(W2), .in0(clk), .sel(sw[0]), .out(W3));
+    mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
