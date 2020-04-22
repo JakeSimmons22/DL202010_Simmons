@@ -3,9 +3,10 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 75e8831915cb4135874b7c61b14a58c8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot guessing_game_test_behav xil_defaultlib.guessing_game_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:30]
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'clk' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:32]
-WARNING: [VRFC 10-3283] element index 17 into 'led' is out of bounds [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:49]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:43]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'clk' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:45]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:47]
+WARNING: [VRFC 10-3283] element index 17 into 'led' is out of bounds [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:62]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,6 +15,7 @@ Compiling module xil_defaultlib.debounce
 Compiling module xil_defaultlib.Counter(N=18)
 Compiling module xil_defaultlib.mux2(N=18)
 Compiling module xil_defaultlib.guess_FSM
+Compiling module xil_defaultlib.mux4
 Compiling module xil_defaultlib.guessing_game
 Compiling module xil_defaultlib.guessing_game_test
 Compiling module xil_defaultlib.glbl

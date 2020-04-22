@@ -22,7 +22,7 @@ module guessing_game(
     wire [3:0] W7;
     
     reg [1:0] Sel = 0;
-    always_ff @(posedge clk)
+    always_ff @(posedge clk)begin
         if(clk) begin
             if(Sel > 2) begin
               Sel = 0;
@@ -31,6 +31,7 @@ module guessing_game(
                 Sel = Sel + 1;       
             end 
         end 
+    end
     
     debounce d1( .in(btnU), .out(W1[3]));
     debounce d2( .in(btnD), .out(W1[2]));
@@ -46,17 +47,20 @@ module guessing_game(
     mux4 m2( .in0(W4[0]), .in1(W4[1]), .in2(W4[2]), .in3(W4[3]) 
     , .sel(Sel), .out(W7));
     
+    assign seg[0] = W7[0];
+    assign seg[1] = W7[1];
+    assign seg[4:2] = 3'b000;
+    assign seg[5] = W7[3];
+    assign seg[6] = W7[2];
+    
     assign led[2:0] = W5;
     assign led[3] = W6;
-    
-    assign seg[6:3] = W7;
-    
+    assign led[4:0] = 5'b00000;
     assign led[5] = W4[0];
     assign led[6] = W4[1];
     assign led[7] = W4[2];
     assign led[8] = W4[3];
     
-    assign led[4:0] = 5'b00000;
     assign led[17:9] = 8'b00000000;
     assign an = 4'b1110;
     
