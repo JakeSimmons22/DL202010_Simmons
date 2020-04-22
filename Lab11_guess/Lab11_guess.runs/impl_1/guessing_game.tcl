@@ -81,6 +81,8 @@ set rc [catch {
   read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/switches.xdc
   read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/led.xdc
   read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnL.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnR.xdc
   link_design -top guessing_game -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

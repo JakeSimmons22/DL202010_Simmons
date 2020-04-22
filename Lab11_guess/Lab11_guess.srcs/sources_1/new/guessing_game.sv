@@ -19,19 +19,6 @@ module guessing_game(
     wire  [15:0] W3;
     wire [3:0] W4;
     wire W5, W6;
-    wire [3:0] W7;
-    
-    reg [1:0] Sel = 0;
-    always_ff @(posedge clk)begin
-        if(clk) begin
-            if(Sel > 3) begin
-              Sel = 0;
-            end
-            else begin
-                Sel = Sel + 1;       
-            end 
-        end 
-    end
     
     debounce d1( .in(btnU), .out(W1[3]));
     debounce d2( .in(btnD), .out(W1[2]));

@@ -65,6 +65,12 @@ set_property used_in_implementation false [get_files C:/Users/School/Documents/G
 read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc
 set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc]
 
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnL.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnL.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnR.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnR.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
