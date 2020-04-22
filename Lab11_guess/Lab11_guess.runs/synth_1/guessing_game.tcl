@@ -34,7 +34,6 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/debounce.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guess_FSM.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/imports/new/mux2.sv
-  C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/imports/new/mux4.sv
   C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv
 }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -45,6 +44,27 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnC.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnC.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnD.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnD.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnU.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnU.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/clock.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/clock.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/switches.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/switches.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/led.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/led.xdc]
+
+read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc
+set_property used_in_implementation false [get_files C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

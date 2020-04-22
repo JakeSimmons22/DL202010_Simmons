@@ -74,6 +74,13 @@ set rc [catch {
   set_property ip_output_repo C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.runs/synth_1/guessing_game.dcp
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnC.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnD.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/btnU.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/clock.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab10_7seg/switches.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/led.xdc
+  read_xdc C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/sseg.xdc
   link_design -top guessing_game -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
