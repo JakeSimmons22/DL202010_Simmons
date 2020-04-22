@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8064 
+INFO: Helper process launched with PID 37376 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 360.891 ; gain = 101.359
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 360.352 ; gain = 101.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'guessing_game' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/debounce.sv:5]
@@ -94,7 +94,7 @@ WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[3]
 WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[2]
 WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 416.355 ; gain = 156.824
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 415.707 ; gain = 156.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,10 +116,10 @@ WARNING: [Synth 8-3295] tying undriven pin count:rst to constant 0 [C:/Users/Sch
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 416.355 ; gain = 156.824
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 415.707 ; gain = 156.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 416.355 ; gain = 156.824
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 415.707 ; gain = 156.781
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -162,30 +162,30 @@ Parsing XDC File [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/
 Finished Parsing XDC File [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnR.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Desktop/btnR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/guessing_game_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/guessing_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 747.703 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 747.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 748.230 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 748.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 747.703 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 747.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "tick" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "tick" won't be mapped to RAM because it is too sparse
@@ -196,7 +196,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'win_reg' [C:/Users/School/D
 WARNING: [Synth 8-327] inferring latch for variable 'lose_reg' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guess_FSM.sv:40]
 WARNING: [Synth 8-327] inferring latch for variable 'nState_reg' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guess_FSM.sv:43]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -225,7 +225,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 9     
 	   4 Input      1 Bit        Muxes := 4     
 	   5 Input      1 Bit        Muxes := 4     
-	   7 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -264,7 +264,7 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 8     
 	   3 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   7 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -318,16 +318,8 @@ WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[4]
 WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[3]
 WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[2]
 WARNING: [Synth 8-3331] design guessing_game has unconnected port sw[1]
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gFSM/y_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gFSM/y_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gFSM/y_reg[3] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\gFSM/y_reg[2] )
-WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[3]) is unused and will be removed from module guessing_game.
-WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[2]) is unused and will be removed from module guessing_game.
-WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[1]) is unused and will be removed from module guessing_game.
-WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[0]) is unused and will be removed from module guessing_game.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,13 +331,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 748.230 ; gain = 488.699
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 747.703 ; gain = 488.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 751.223 ; gain = 491.691
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 749.184 ; gain = 490.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -359,10 +351,14 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (gFSM/win_reg) is unused and will be removed from module guessing_game.
 WARNING: [Synth 8-3332] Sequential element (gFSM/lose_reg) is unused and will be removed from module guessing_game.
 WARNING: [Synth 8-3332] Sequential element (gFSM/nState_reg[2]) is unused and will be removed from module guessing_game.
+WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[3]) is unused and will be removed from module guessing_game.
+WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[2]) is unused and will be removed from module guessing_game.
+WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[1]) is unused and will be removed from module guessing_game.
+WARNING: [Synth 8-3332] Sequential element (gFSM/y_reg[0]) is unused and will be removed from module guessing_game.
 WARNING: [Synth 8-3332] Sequential element (gFSM/nState_reg[1]) is unused and will be removed from module guessing_game.
 WARNING: [Synth 8-3332] Sequential element (gFSM/nState_reg[0]) is unused and will be removed from module guessing_game.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -386,7 +382,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -399,7 +395,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -411,25 +407,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -445,35 +441,45 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |OBUF |    28|
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     5|
+|4     |LUT3 |     1|
+|5     |FDCE |     2|
+|6     |FDRE |     1|
+|7     |IBUF |     3|
+|8     |OBUF |    28|
 +------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    28|
-+------+---------+-------+------+
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          |    43|
+|2     |  count  |Counter   |     2|
+|3     |  m      |mux2      |     1|
+|4     |  gFSM   |guess_FSM |     8|
++------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 751.727 ; gain = 160.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.727 ; gain = 492.195
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 749.285 ; gain = 158.363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 749.285 ; gain = 490.359
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.199 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 757.832 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 766.199 ; gain = 518.922
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.199 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 757.832 ; gain = 510.137
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 757.832 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.runs/synth_1/guessing_game.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file guessing_game_utilization_synth.rpt -pb guessing_game_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 17:05:07 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 17:20:23 2020...

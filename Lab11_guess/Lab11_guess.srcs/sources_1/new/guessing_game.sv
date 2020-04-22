@@ -34,18 +34,24 @@ module guessing_game(
     
     //top
     assign seg[0] = ~W4[0];
+    
     //right
     assign seg[1] = ~W4[1];
+    
     assign seg[4:2] = 3'b111;
+    
     //left
     assign seg[5] = ~W4[3];
+    
     //bottom
     assign seg[6] = ~W4[2];
     
     //win
     assign led[0] = W5;
+    
     //lose
     assign led[1] = W6;
+    
     assign led[15:2] = 14'b00000000000000;
     assign an = 4'b1110;
     
