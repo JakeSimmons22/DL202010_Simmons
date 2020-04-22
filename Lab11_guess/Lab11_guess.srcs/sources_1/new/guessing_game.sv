@@ -11,7 +11,8 @@ module guessing_game(
     input [15:0]sw,
     output [6:0] seg,
     output [3:0] an,
-    output [15:0] led
+    output [15:0] led,
+    output dp
     );
     
     wire [3:0] W1;
@@ -38,15 +39,13 @@ module guessing_game(
     assign seg[5] = W4[3];
     assign seg[6] = W4[2];
     
-    assign led[2:0] = W5;
-    assign led[3] = W6;
-    assign led[4:0] = 5'b00000;
-    assign led[5] = W4[0];
-    assign led[6] = W4[1];
-    assign led[7] = W4[2];
-    assign led[8] = W4[3];
-    
-    assign led[15:9] = 8'b00000000;
+    //win
+    assign led[0] = W5;
+    //lose
+    assign led[1] = W6;
+    assign led[15:2] = 14'b00000000000000;
     assign an = 4'b1110;
+    
+    assign dp = 1'b1;
     
 endmodule
