@@ -2,7 +2,7 @@
 //ELC 2137, Jake Simmons, 2020-04-20
 
 
-module guess_FSM #(parameter N=19)(
+module guess_FSM (
     input [3:0]b,
     input reset,
     input clk,
@@ -22,16 +22,13 @@ module guess_FSM #(parameter N=19)(
         
     //internal signals
     reg[2:0] nState, State;
-    reg[N-1:0] counter, ncounter;
     
     always_ff @(posedge clk or posedge reset)
         if(reset) begin
             State <= S0;
-            counter <= {N{1'b1}};
         end
         else begin
             State <= nState;
-            counter <= ncounter;
         end
         
 
