@@ -7,9 +7,9 @@ module mux4 #(parameter N =4)(
      
      always @*
         case(sel)
-        0: out = in0;
-        1: out = in1;
-        2: out = in2;
+        1: out = in0;
+        2: out = in1;
+        4: out = in2;
         default: out = in3;
         endcase 
 endmodule
