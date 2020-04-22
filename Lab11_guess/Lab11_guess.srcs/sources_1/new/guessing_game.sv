@@ -8,7 +8,7 @@ module guessing_game(
     input btnL,
     input btnC,
     input clk,
-    input sw,
+    input [15:0]sw,
     output [6:0] seg,
     output [3:0] an,
     output [15:0] led
@@ -40,18 +40,16 @@ module guessing_game(
     
     Counter #(.N(18)) count( .clk(clk), .en(1'b1), .count(W2) );
     
-    mux2 #(.N(18)) m( .in1(W2), .in0(clk), .sel(sw), .out(W3));
+    mux2 #(.N(18)) m( .in1(W2), .in0(clk), .sel(sw[0]), .out(W3));
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
-    mux4 m2( .in0(W4[0]), .in1(W4[1]), .in2(W4[2]), .in3(W4[3]) 
-    , .sel(Sel), .out(W7));
-    
-    assign seg[0] = W7[0];
-    assign seg[1] = W7[1];
+    assign sw[15:1] = 0;
+    assign seg[0] = W4[0];
+    assign seg[1] = W4[1];
     assign seg[4:2] = 3'b000;
-    assign seg[5] = W7[3];
-    assign seg[6] = W7[2];
+    assign seg[5] = W4[3];
+    assign seg[6] = W4[2];
     
     assign led[2:0] = W5;
     assign led[3] = W6;
