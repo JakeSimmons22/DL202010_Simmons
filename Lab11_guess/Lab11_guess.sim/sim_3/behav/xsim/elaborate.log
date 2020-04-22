@@ -5,7 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 18 for port 'in0' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:30]
 WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'clk' [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:32]
-WARNING: [VRFC 10-3283] element index 7 into 'seg' is out of bounds [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:38]
+WARNING: [VRFC 10-3283] element index 17 into 'led' is out of bounds [C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sources_1/new/guessing_game.sv:49]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

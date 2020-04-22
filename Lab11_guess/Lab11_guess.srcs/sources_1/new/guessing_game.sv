@@ -19,6 +19,18 @@ module guessing_game(
     wire  [15:0] W3;
     wire [3:0] W4;
     wire W5, W6;
+    wire [3:0] W7;
+    
+    reg [1:0] Sel = 0;
+    always_ff @(posedge clk)
+        if(clk) begin
+            if(Sel > 2) begin
+              Sel = 0;
+            end
+            else begin
+                Sel = Sel + 1;       
+            end 
+        end 
     
     debounce d1( .in(btnU), .out(W1[3]));
     debounce d2( .in(btnD), .out(W1[2]));
@@ -31,20 +43,21 @@ module guessing_game(
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
+    mux4 m2( .in0(W4[0]), .in1(W4[1]), .in2(W4[2]), .in3(W4[3]) 
+    , .sel(Sel), .out(W7));
     
     assign led[2:0] = W5;
     assign led[3] = W6;
     
-    assign seg[7] = W4[0];
-    assign seg[6] = W4[1];
-    assign seg[5] = W4[2];
-    assign seg[4] = W4[3];
+    assign seg[6:3] = W7;
     
     assign led[5] = W4[0];
     assign led[6] = W4[1];
     assign led[7] = W4[2];
     assign led[8] = W4[3];
     
+    assign led[4:0] = 5'b00000;
+    assign led[17:9] = 8'b00000000;
     assign an = 4'b1110;
     
 endmodule

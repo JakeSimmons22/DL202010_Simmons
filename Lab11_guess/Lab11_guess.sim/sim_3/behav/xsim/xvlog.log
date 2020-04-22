@@ -10,5 +10,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/School/Documents/Git
 INFO: [VRFC 10-311] analyzing module mux2
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.srcs/sim_3/new/guessing_game_test.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module guessing_game_test
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/School/Documents/GitHub/DL202010_Simmons/Lab11_guess/Lab11_guess.sim/sim_3/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
