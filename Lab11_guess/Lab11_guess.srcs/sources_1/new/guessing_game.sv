@@ -61,7 +61,7 @@ module guessing_game(
     assign led[7] = W4[2];
     assign led[8] = W4[3];
     
-    assign led[17:9] = 8'b00000000;
+    assign led[15:9] = 8'b00000000;
     assign an = 4'b1110;
     
 endmodule
