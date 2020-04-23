@@ -1,4 +1,4 @@
-Running: xsim.dir/guessing_game_test_behav/xsimk.exe -simmode gui -wdb guessing_game_test_behav.wdb -simrunnum 0 -socket 60151
+Running: xsim.dir/guessing_game_test_behav/xsimk.exe -simmode gui -wdb guessing_game_test_behav.wdb -simrunnum 0 -socket 60974
 Design successfully loaded
-Design Loading Memory Usage: 8548 KB (Peak: 8548 KB)
-Design Loading CPU Usage: 93 ms
+Design Loading Memory Usage: 8544 KB (Peak: 8544 KB)
+Design Loading CPU Usage: 421 ms

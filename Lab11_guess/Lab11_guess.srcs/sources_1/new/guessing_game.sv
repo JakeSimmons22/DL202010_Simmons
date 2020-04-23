@@ -20,15 +20,15 @@ module guessing_game(
     wire  [15:0] W3;
     wire [3:0] W4;
     wire W5, W6;
-    wire [20:0] W7;
+    wire [23:0] W7;
     
-    debounce d1( .in(btnU), .tick(W1[3]));
-    debounce d2( .in(btnD), .tick(W1[2]));
-    debounce d3( .in(btnL), .tick(W1[1]));
-    debounce d4( .in(btnR), .tick(W1[0]));
+    debounce d1( .in(btnU), .count(W1[3]));
+    debounce d2( .in(btnD), .count(W1[2]));
+    debounce d3( .in(btnL), .count(W1[1]));
+    debounce d4( .in(btnR), .count(W1[0]));
     
     Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2) );
-    Counter #(.N(21)) count1( .clk(clk), .en(1'b1), .tick(W7));
+    Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
     mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
     
@@ -49,10 +49,10 @@ module guessing_game(
     assign seg[6] = ~W4[2];
     
     //win
-    assign led[0] = W5;
+    assign led[0] = ~W5;
     
     //lose
-    assign led[1] = W6;
+    assign led[1] = ~W6;
     
     assign led[15:2] = 14'b00000000000000;
     assign an = 4'b1110;
