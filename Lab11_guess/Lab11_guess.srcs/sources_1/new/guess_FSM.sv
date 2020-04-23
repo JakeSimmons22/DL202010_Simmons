@@ -83,6 +83,7 @@ module guess_FSM (
         
         SWIN: begin
             win = 1'b1;
+            lose = 1'b0;
             if(b==0)
                 nState = S0;
             else
@@ -91,6 +92,7 @@ module guess_FSM (
         
         SLOSE: begin
             lose = 1'b1;
+            win = 1'b0;
             if(b==0)
                 nState = S0;
             else

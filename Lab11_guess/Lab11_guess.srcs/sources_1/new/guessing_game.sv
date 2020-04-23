@@ -16,37 +16,37 @@ module guessing_game(
     );
     
     wire [3:0] W1;
-    wire [24:0] W2;
-    wire  [15:0] W3;
+    wire [1:0] W2;
+    wire [15:0] W3;
     wire [3:0] W4;
     wire W5, W6;
-    wire [23:0] W7;
+    wire [1:0] W7;
     
-    debounce #(.N(1)) d1( .in(btnU), .out(W1[3]));
-    debounce #(.N(1)) d2( .in(btnR), .out(W1[2]) );
-    debounce #(.N(1)) d3( .in(btnD), .out(W1[1]));
-    debounce #(.N(1)) d4( .in(btnL),.out(W1[0]));
+    debounce #(.N(21)) d1( .in(btnU), .clk(clk), .reset(btnC), .out(W1[3]));
+    debounce #(.N(21)) d2( .in(btnR), .clk(clk), .reset(btnC), .out(W1[2]));
+    debounce #(.N(21)) d3( .in(btnD), .clk(clk), .reset(btnC), .out(W1[1]));
+    debounce #(.N(21)) d4( .in(btnL), .clk(clk), .reset(btnC), .out(W1[0]));
     
     Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
-    Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
+    Counter #(.N(26)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
     mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
     //top
-    assign seg[0] = ~W4[0];
+    assign seg[0] = ~W4[3];
     
     //right
-    assign seg[1] = ~W4[1];
+    assign seg[1] = ~W4[2];
     
     assign seg[4:2] = 3'b111;
     
     //left
-    assign seg[5] = ~W4[3];
+    assign seg[5] = ~W4[0];
     
     //bottom
-    assign seg[6] = ~W4[2];
+    assign seg[6] = ~W4[1];
     
     //win
     assign led[0] = W5;

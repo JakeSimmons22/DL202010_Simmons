@@ -226,6 +226,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_3" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_3">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_3/new/guessing_game_test.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
