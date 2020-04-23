@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-The purpose of this lab was to learn how to use the technique called Time-Division Multiplexing. We are using Time-Division Multiplexing to slow down the signals going to the 4 digit display. This is so there will be enough time for a human to process and see what is actually being displayed. First, a counter module was made and succesfully simulated. Secondly, the sseg4 from a previous lab was modified and the counter was added to the module. A schematic of the new, sseg4TDM, is provided. After testing sseg4TDM, the top level module, calclab10, was created. The top level module toplab9 was used in this module which was also created in a previous lab.  
+The purpose of this lab was to learn how to learn the role of finite state machines, learn the difference between a Mealy output and a Moore output as well as implement a state machine in Verilog. We first were given an already made debounce module and test bench with the purpose of testing that its behaviour did what it was suppose to do. After this we were given a state diagram for a gussing game and made a module guess FSM from it. Guess FSM was also tested to make sure its behavuour did what it was suppose to do. After this we used the debounce, guess FSM, a earlier created counter and mux2 to create the guessing game module. After this was done the guess game was tested by simulation and by playing the game itself. 
 
 \clearpage
 \section*{Q\&A}
@@ -86,7 +86,7 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 
 	\item What type of outputs did you use for your design(Mealy or Moore)? Explain.
 	\begin{enumerate}
-		\item Mealy becasue the ouput is determnined by the current state and the input values
+		\item Moore becasue the ouput is determnined only by the current state and the input values only determine whats the next state and not the output as well. 
 	\end{enumerate}
 	\item On the hard diffculty I had a win percentage of 20 percent and on the easy diffculty I have a win percentage of 90 percent.
 \end{enumerate}
