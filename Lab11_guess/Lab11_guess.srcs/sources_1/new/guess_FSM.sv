@@ -48,8 +48,8 @@ module guess_FSM (
         
         S1: begin
             y[1] = 1;
-            y[0] = 0;
-            y[3:2] = 0;
+            //y[0] = 0;
+            //y[3:2] = 0;
             if(b==2)
                 nState = SWIN;
             else if(b==0)
@@ -60,8 +60,8 @@ module guess_FSM (
         
         S2: begin
             y[2] = 1;
-            y[3] = 0;
-            y[1:0] = 0;
+            //y[3] = 0;
+            //y[1:0] = 0;
             if(b==4)
                 nState = SWIN;
             else if(b==0)
@@ -72,7 +72,7 @@ module guess_FSM (
         
         S3: begin
             y[3] = 1;
-            y[2:0] = 0;
+            //y[2:0] = 0;
             if(b==8)
                 nState = SWIN;
             else if(b==0)
