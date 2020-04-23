@@ -2,3 +2,6 @@ Running: xsim.dir/guessing_game_test_behav/xsimk.exe -simmode gui -wdb guessing_
 Design successfully loaded
 Design Loading Memory Usage: 8544 KB (Peak: 8544 KB)
 Design Loading CPU Usage: 421 ms
+Simulation completed
+Simulation Memory Usage: 17200 KB (Peak: 17200 KB)
+Simulation CPU Usage: 187796 ms

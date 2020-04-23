@@ -27,7 +27,7 @@ module guessing_game(
     debounce d3( .in(btnL), .count(W1[1]));
     debounce d4( .in(btnR), .count(W1[0]));
     
-    Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2) );
+    Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
     Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
     mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 // ELC 2137 Jake Simmons 7-4-2020
 
-module Counter #(parameter N=1) 
+module Counter #(parameter N=2) 
     ( 
     input clk, rst, en, 
     output [N-1:0] count , 
