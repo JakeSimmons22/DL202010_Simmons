@@ -23,10 +23,8 @@ module guess_FSM (
     reg[2:0] nState, State;
     
     always_ff @(posedge clk or posedge reset)
-        if(reset) begin
+        if(reset == 1) begin
             State <= S0;
-            win = 1'b0;
-            lose = 1'b0;
         end
         else begin
             State <= nState;

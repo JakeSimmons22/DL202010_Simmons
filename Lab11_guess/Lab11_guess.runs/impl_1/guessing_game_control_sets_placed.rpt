@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Apr 22 19:54:28 2020
+| Date         : Wed Apr 22 21:04:24 2020
 | Host         : DESKTOP-9OU7RV8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file guessing_game_control_sets_placed.rpt
 | Design       : guessing_game
@@ -57,11 +57,11 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+------------------+------------------+----------------+
-|  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------+---------------+------------------+------------------+----------------+
-|  count1/W3[0]  |               | btnC_IBUF        |                1 |              2 |
-|  clk_IBUF_BUFG |               |                  |               13 |             49 |
-+----------------+---------------+------------------+------------------+----------------+
++------------------------+---------------+------------------+------------------+----------------+
+|      Clock Signal      | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------+---------------+------------------+------------------+----------------+
+|  count1/Q_reg_reg[8]_0 |               | btnC_IBUF        |                1 |              2 |
+|  clk_IBUF_BUFG         |               |                  |               13 |             49 |
++------------------------+---------------+------------------+------------------+----------------+
 
 

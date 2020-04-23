@@ -22,10 +22,10 @@ module guessing_game(
     wire W5, W6;
     wire [23:0] W7;
     
-    debounce d1( .in(btnU), .out(W1[3]));
-    debounce d2( .in(btnD), .out(W1[2]));
-    debounce d3( .in(btnL), .out(W1[1]));
-    debounce d4( .in(btnR), .out(W1[0]));
+    debounce #(.N(1)) d1( .in(btnU), .out(W1[3]));
+    debounce #(.N(1)) d2( .in(btnR), .out(W1[2]) );
+    debounce #(.N(1)) d3( .in(btnD), .out(W1[1]));
+    debounce #(.N(1)) d4( .in(btnL),.out(W1[0]));
     
     Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
     Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
