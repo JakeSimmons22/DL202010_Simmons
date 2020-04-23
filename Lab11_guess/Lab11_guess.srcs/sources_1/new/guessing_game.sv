@@ -58,6 +58,6 @@ module guessing_game(
     assign led[15:2] = 14'b00000000000000;
     assign an = 4'b1110;
     
-    assign dp = 1'b0;
+    assign dp = 1'b1;
     
 endmodule

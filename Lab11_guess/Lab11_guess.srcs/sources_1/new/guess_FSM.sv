@@ -25,8 +25,8 @@ module guess_FSM (
     always_ff @(posedge clk or posedge reset)
         if(reset) begin
             State <= S0;
-            win = 0;
-            lose = 0;
+            win = 1'b0;
+            lose = 1'b0;
         end
         else begin
             State <= nState;
@@ -38,8 +38,8 @@ module guess_FSM (
         S0: begin
             y[0] = 1;
             y[3:1] = 0;
-            lose = 0;
-            win = 0;
+            lose = 1'b0;
+            win = 1'b0;
             if(b==1)
                 nState = SWIN;
             else if(b==0)
@@ -84,7 +84,7 @@ module guess_FSM (
         end
         
         SWIN: begin
-            win = 1;
+            win = 1'b1;
             if(b==0)
                 nState = S0;
             else
@@ -92,7 +92,7 @@ module guess_FSM (
         end
         
         SLOSE: begin
-            lose = 1;
+            lose = 1'b1;
             if(b==0)
                 nState = S0;
             else
