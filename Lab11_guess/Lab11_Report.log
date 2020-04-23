@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  23 APR 2020 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  23 APR 2020 12:21
 entering extended mode
 **./Lab11_Report.tex
 (Lab11_Report.tex
@@ -327,10 +327,64 @@ LaTeX Warning: Label `fig:sim_with_table' multiply defined.
 LaTeX Warning: Label `fig:sim_with_table' multiply defined.
 
 
-LaTeX Warning: Label `fig:picture' multiply defined.
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
 
 
-LaTeX Warning: Label `fig:picture' multiply defined.
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
 
 )
 \openout1 = `Lab11_Report.aux'.
@@ -479,30 +533,223 @@ File: guess_FSM_test.JPG Graphic file (type jpg)
 <use guess_FSM_test.JPG>
 Package pdftex.def Info: guess_FSM_test.JPG  used on input line 132.
 (pdftex.def)             Requested size: 212.52182pt x 126.97406pt.
-! Undefined control sequence.
-<recently read> \midule 
-                        
-l.153 		\midule
-               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 <guessing_game_test.JPG, id=26, 692.5875pt x 204.26312pt>
 File: guessing_game_test.JPG Graphic file (type jpg)
 <use guessing_game_test.JPG>
-Package pdftex.def Info: guessing_game_test.JPG  used on input line 160.
+Package pdftex.def Info: guessing_game_test.JPG  used on input line 156.
 (pdftex.def)             Requested size: 436.51164pt x 204.26262pt.
 File: guessing_game_test.JPG Graphic file (type jpg)
 <use guessing_game_test.JPG>
-Package pdftex.def Info: guessing_game_test.JPG  used on input line 161.
+Package pdftex.def Info: guessing_game_test.JPG  used on input line 157.
 (pdftex.def)             Requested size: 280.02187pt x 204.26262pt.
+<IMG_1301.JPG, id=29, 4047.12pt x 3035.34pt>
+File: IMG_1301.JPG Graphic file (type jpg)
+<use IMG_1301.JPG>
+Package pdftex.def Info: IMG_1301.JPG  used on input line 164.
+(pdftex.def)             Requested size: 650.43001pt x 487.79485pt.
+
+Overfull \hbox (180.67499pt too wide) in paragraph at lines 164--165
+ [][] 
+ []
+
+<IMG_1302.JPG, id=30, 4047.12pt x 3035.34pt>
+File: IMG_1302.JPG Graphic file (type jpg)
+<use IMG_1302.JPG>
+Package pdftex.def Info: IMG_1302.JPG  used on input line 168.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 168--169
+ [][] 
+ []
+
+<IMG_1303.JPG, id=31, 4047.12pt x 3035.34pt>
+File: IMG_1303.JPG Graphic file (type jpg)
+<use IMG_1303.JPG>
+Package pdftex.def Info: IMG_1303.JPG  used on input line 172.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 172--173
+ [][] 
+ []
+
+<IMG_1304.JPG, id=32, 4047.12pt x 3035.34pt>
+File: IMG_1304.JPG Graphic file (type jpg)
+<use IMG_1304.JPG>
+Package pdftex.def Info: IMG_1304.JPG  used on input line 176.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 176--177
+ [][] 
+ []
+
+<IMG_1305.JPG, id=33, 4047.12pt x 3035.34pt>
+File: IMG_1305.JPG Graphic file (type jpg)
+<use IMG_1305.JPG>
+Package pdftex.def Info: IMG_1305.JPG  used on input line 180.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 180--181
+ [][] 
+ []
+
+<IMG_1306.JPG, id=34, 4047.12pt x 3035.34pt>
+File: IMG_1306.JPG Graphic file (type jpg)
+<use IMG_1306.JPG>
+Package pdftex.def Info: IMG_1306.JPG  used on input line 184.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 184--185
+ [][] 
+ []
+
+<IMG_1307.JPG, id=35, 4047.12pt x 3035.34pt>
+File: IMG_1307.JPG Graphic file (type jpg)
+<use IMG_1307.JPG>
+Package pdftex.def Info: IMG_1307.JPG  used on input line 188.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 188--189
+ [][] 
+ []
+
+<IMG_1308.JPG, id=36, 4047.12pt x 3035.34pt>
+File: IMG_1308.JPG Graphic file (type jpg)
+<use IMG_1308.JPG>
+Package pdftex.def Info: IMG_1308.JPG  used on input line 192.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+<IMG_1309.JPG, id=37, 4047.12pt x 3035.34pt>
+File: IMG_1309.JPG Graphic file (type jpg)
+<use IMG_1309.JPG>
+Package pdftex.def Info: IMG_1309.JPG  used on input line 196.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 196--197
+ [][] 
+ []
+
+<IMG_1310.JPG, id=38, 4047.12pt x 3035.34pt>
+File: IMG_1310.JPG Graphic file (type jpg)
+<use IMG_1310.JPG>
+Package pdftex.def Info: IMG_1310.JPG  used on input line 200.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 200--201
+ [][] 
+ []
+
+<IMG_1311.JPG, id=39, 4047.12pt x 3035.34pt>
+File: IMG_1311.JPG Graphic file (type jpg)
+<use IMG_1311.JPG>
+Package pdftex.def Info: IMG_1311.JPG  used on input line 204.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 204--205
+ [][] 
+ []
+
+<IMG_1312.JPG, id=40, 4047.12pt x 3035.34pt>
+File: IMG_1312.JPG Graphic file (type jpg)
+<use IMG_1312.JPG>
+Package pdftex.def Info: IMG_1312.JPG  used on input line 208.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 208--209
+ [][] 
+ []
+
+<IMG_1313.JPG, id=41, 4047.12pt x 3035.34pt>
+File: IMG_1313.JPG Graphic file (type jpg)
+<use IMG_1313.JPG>
+Package pdftex.def Info: IMG_1313.JPG  used on input line 212.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 212--213
+ [][] 
+ []
+
+<IMG_1314.JPG, id=42, 4047.12pt x 3035.34pt>
+File: IMG_1314.JPG Graphic file (type jpg)
+<use IMG_1314.JPG>
+Package pdftex.def Info: IMG_1314.JPG  used on input line 216.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 216--217
+ [][] 
+ []
+
+<IMG_1315.JPG, id=43, 4047.12pt x 3035.34pt>
+File: IMG_1315.JPG Graphic file (type jpg)
+<use IMG_1315.JPG>
+Package pdftex.def Info: IMG_1315.JPG  used on input line 220.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 220--221
+ [][] 
+ []
+
+<IMG_1316.JPG, id=44, 4047.12pt x 3035.34pt>
+File: IMG_1316.JPG Graphic file (type jpg)
+<use IMG_1316.JPG>
+Package pdftex.def Info: IMG_1316.JPG  used on input line 224.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 224--225
+ [][] 
+ []
+
+<IMG_1317.JPG, id=45, 4047.12pt x 3035.34pt>
+File: IMG_1317.JPG Graphic file (type jpg)
+<use IMG_1317.JPG>
+Package pdftex.def Info: IMG_1317.JPG  used on input line 228.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 228--229
+ [][] 
+ []
+
+<IMG_1318.JPG, id=46, 4047.12pt x 3035.34pt>
+File: IMG_1318.JPG Graphic file (type jpg)
+<use IMG_1318.JPG>
+Package pdftex.def Info: IMG_1318.JPG  used on input line 232.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 232--233
+ [][] 
+ []
+
+<IMG_1319.JPG, id=47, 4047.12pt x 3035.34pt>
+File: IMG_1319.JPG Graphic file (type jpg)
+<use IMG_1319.JPG>
+Package pdftex.def Info: IMG_1319.JPG  used on input line 236.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 236--237
+ [][] 
+ []
+
+<IMG_1320.JPG, id=48, 4047.12pt x 3035.34pt>
+File: IMG_1320.JPG Graphic file (type jpg)
+<use IMG_1320.JPG>
+Package pdftex.def Info: IMG_1320.JPG  used on input line 240.
+(pdftex.def)             Requested size: 4047.11017pt x 3035.33263pt.
+
+Overfull \hbox (3577.35515pt too wide) in paragraph at lines 240--241
+ [][] 
+ []
+
 [3
 
  <./debounce_test.JPG>] [4 <./guess_FSM_test.JPG>] [5 <./guessing_game_test.JPG
->] [6]
+> <./IMG_1301.JPG> <./IMG_1302.JPG> <./IMG_1303.JPG> <./IMG_1304.JPG> <./IMG_13
+05.JPG> <./IMG_1306.JPG> <./IMG_1307.JPG> <./IMG_1308.JPG> <./IMG_1309.JPG> <./
+IMG_1310.JPG> <./IMG_1311.JPG> <./IMG_1312.JPG> <./IMG_1313.JPG> <./IMG_1314.JP
+G> <./IMG_1315.JPG> <./IMG_1316.JPG> <./IMG_1317.JPG> <./IMG_1318.JPG> <./IMG_1
+319.JPG> <./IMG_1320.JPG>]
 ("C:\Users\School\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1
 .sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -516,18 +763,18 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 185.
+nput line 252.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 187.
- [7
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 254.
+ [6
 
-] [8] [9] [10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 498.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 498.
+] [7] [8] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
  (Lab11_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 498.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 498.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 565.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
 Package rerunfilecheck Info: File `Lab11_Report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -536,10 +783,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9073 strings out of 481556
- 134637 string characters out of 2913401
- 747526 words of memory out of 3000000
- 23878 multiletter control sequences out of 15000+200000
+ 9205 strings out of 481556
+ 136553 string characters out of 2913401
+ 748494 words of memory out of 3000000
+ 23973 multiletter control sequences out of 15000+200000
  537062 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,49p,1203b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -549,9 +796,9 @@ public/amsfonts/cm/cmr10.pfb><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/School/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/School/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Lab11_Report.pdf (12 pages, 750825 bytes).
+Output written on Lab11_Report.pdf (11 pages, 17173975 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 313 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 489 PDF objects out of 1000 (max. 8388607)
+ 330 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
