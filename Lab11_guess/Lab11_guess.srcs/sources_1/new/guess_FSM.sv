@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 //ELC 2137, Jake Simmons, 2020-04-20
+
 module guess_FSM (
     input [3:0]b,
     input reset,
@@ -24,6 +25,8 @@ module guess_FSM (
     always_ff @(posedge clk or posedge reset)
         if(reset) begin
             State <= S0;
+            win = 0;
+            lose = 0;
         end
         else begin
             State <= nState;
