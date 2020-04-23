@@ -28,9 +28,9 @@ module guessing_game(
     debounce #(.N(21)) d4( .in(btnL), .clk(clk), .reset(btnC), .out(W1[0]));
     
     Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
-    Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
+    Counter #(.N(23)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
-    mux2 #(.N(2)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
+    mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
