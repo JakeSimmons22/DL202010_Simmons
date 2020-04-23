@@ -30,7 +30,7 @@ module guessing_game(
     Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
     Counter #(.N(24)) count1( .clk(clk), .en(1'b1), .tick(W7));
     
-    mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
+    mux2 #(.N(2)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
     
     guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
     
