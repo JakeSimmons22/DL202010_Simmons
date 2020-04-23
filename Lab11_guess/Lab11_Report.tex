@@ -83,7 +83,7 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 	
 	\begin{figure}[ht]\centering
 		\caption{10.3B Labeling}
-		\includegraphics[trim={8.8cm 5cm 0cm 14cm},clip]{10.3_b.pdf}
+	%	\includegraphics[trim={8.8cm 5cm 0cm 14cm},clip]{10.3_b.pdf}
 		\label{fig:picture}
 	\end{figure}
 
@@ -98,54 +98,84 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 \section*{Results}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrrrrrrrrrrrrr}
-		Time (ns): & 0 & 20 & 40 & 60 & 80  & 100 & 120 & 140 & 160 & 180 & 200 & 220 & 240 & 260 & 280  & 300 & 320  \\
+	\begin{tabular}{l|rrrrrrrrrrrrrrrr}
+		Time (ns): & 0 & 50 & 100 & 150 & 200  & 250 & 300 & 350 & 400 & 450 & 500 & 550 & 600 & 650 & 700  & 750\\
 		\midrule
-		clk & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-		en & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 \\
-		rst & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		clk & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+		rst & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		in & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
 		\midrule
-		count & X & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & a & b & c & d & e & f & 0 \\
-		tick & X & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+		out & X & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		tick & X & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		i & X & 0 & 1 & 4 & 6 & 9 & a & a & a & a & 1 & 4 & 6 & 9 & a & a \\
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics[trim={0cm 0cm 12.5cm 0cm},clip]{Counter_Test.JPG}
-	\includegraphics[trim={14cm 0cm 0cm 0cm},clip]{Counter_Test.JPG}
-	\caption{Counter simulation waveform and ERT}
+	\includegraphics[trim=0cm 0cm 11cm 0cm, clip]{debounce_test.JPG}
+	\includegraphics[trim=15cm 0cm 2cm 0cm, clip]{debounce_test.JPG}
+	\caption{debounce simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrrrrrrrrrrrrrrrrr}
-		Time (ms): & 0 & 2 & 4 & 6 & 8  & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28  & 30 & 32 & 34 & 36 & 38 & 40  \\
+	\begin{tabular}{l|rrrrrrrrrrrrrrrrr}
+		Time (ms): & 0 & 25 & 50 & 75 & 100  & 125 & 150 & 175 & 200 & 225 & 250 & 275 & 300 & 325 & 350  & 375 & 400  \\
 		\midrule
-		clk & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-		rst & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-		data & 0 & 1 & 1 & 2 & 3 & 4 & 4 & 5 & 6 & 7 & 8 & 8 & 9 & a & b & c & c & d & e & e & f\\
-		hexdec & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		clk & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+		rst & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		b & 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 & 0 & 4 & 0 & 1 & 8 & b & 0 & 0 \\
 		\midrule
-		seg & 40 & 79 & 79 & 24 & 40 & 40 & 40 & 40 & 40 & 40 & 3f & 3f & 30 & 08 & 40 & 79 & 79 & 40 & 40 & 40 & 40\\
-		dp & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
-		an & e & e & e & e & e & d & d & d & 7 & 7 & 7 & e & e & e & d & d & d & b & b & b & 7\\
+		y & X & 1 & 2 & 4 & 8 & 8 & 1 & 1 & 1 & 1 & 2 & 2 & 1 & 1 & 2 & 2 & 1 \\
+		win & X & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+		lose & X & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1\\
+		\bottomrule
+	\end{tabular}\medskip
+
+	
+	\includegraphics[trim= 0cm 0cm 8cm 0cm]{guess_FSM_test.JPG}
+
+	\caption{guess FSM simulation waveform and ERT}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+	\begin{tabular}{l|rrrrrrrrrrrr}
+		Time (ms): & 0 & 20 & 40 & 60 & 80  & 100 & 120 & 140 & 160 & 180 & 200 & 220 \\
+		\midrule
+		btnU & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0  \\
+		btnD & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0  \\
+		btnR & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0  \\
+		btnL & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0  \\
+		btnC & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+		clk & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1  \\
+		sw & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1  \\
+		\midrule
+		seg & X & 5f & 5f & 5f & 5f & 5f & 5f & 5f & 5f & 5f & 5f & 5f  \\
+		an & e & e & e & e & e & e & e & e & e & e & e & e  \\
+		led & X & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+		\midule
+	
+		\midrule
+		
 		\bottomrule
 	\end{tabular}\medskip
 	
-	\includegraphics[trim={0cm 0cm 12.5cm 0cm},clip]{sseg4_TDM_Test.JPG}
-	\includegraphics[trim={17.5cm 0cm 0cm 0cm},clip]{sseg4_TDM_Test.JPG}
-	\caption{sseg4TDM simulation waveform and ERT}
+	\includegraphics[trim=0cm 0cm 9cm 0cm,clip]{guessing_game_test.JPG}
+	\includegraphics[trim=14.5cm 0cm 0cm 0cm,clip]{guessing_game_test.JPG}
+	
+	\caption{guess FSM simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
 	\caption{sseg4TDM Schematic}
-	\includegraphics[width=1.05\textwidth]{sseg4_TDM_Schematic.jpeg}
+%	\includegraphics[width=1.05\textwidth]{sseg4_TDM_Schematic.jpeg}
 	\label{fig:picture}
 \end{figure}
 
 \begin{figure}[ht]\centering
 	\caption{calclab10 Schematic}
-	\includegraphics[width=1.15 \textwidth]{calc_lab10_Schematic.jpeg}
+%	\includegraphics[width=1.15 \textwidth]{calc_lab10_Schematic.jpeg}
 	\label{fig:picture}
 \end{figure}
 
