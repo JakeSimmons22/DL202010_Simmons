@@ -23,24 +23,25 @@ end
 
 initial begin
     clk = 0; btnC = 0; btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
-    btnC = 1; #10;
-    btnC = 0; #10;
-    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 0; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #20;
-    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 1; #20;
-    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #20;
+    btnC = 1; #20;
+    btnC = 0; #20;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 0; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+    btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 1; #10;
+    btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
   
 end
 endmodule
