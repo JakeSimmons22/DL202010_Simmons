@@ -183,133 +183,188 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 \section*{Code}
 
 \begin{lstlisting}[style=Verilog,
-caption=Counter Module,
-label=counter 
+caption=guess FSM Module,
+label=guess FSM 
 ]
 
 `timescale 1ns / 1ps
-// ELC 2137 Jake Simmons 2020-7-4
+//ELC 2137, Jake Simmons, 2020-04-20
 
-module Counter #(parameter N=1) ( 
-	input clk, rst, en, 
-	output [N-1:0] count , 
-	output tick 
+module guess_FSM (
+	input [3:0]b,
+	input reset,
+	input clk,
+	output reg [3:0]y,
+	output reg win,
+	output reg lose
 	);
-	// internal signals 
-	reg [N-1:0] Q_reg , Q_next;
-	// register (state memory) 
-	always @(posedge clk, posedge rst) 
-		begin 
-			if (rst) 
-				Q_reg <= 0; 
-			else 
-				Q_reg <= Q_next; 
+
+	//states
+	localparam [2:0]
+		S0 = 3'b000,
+		S1 = 3'b001,
+		S2 = 3'b010,
+		S3 = 3'b011,
+		SWIN = 3'b100,
+		SLOSE = 3'b101;
+
+	//internal signals
+	reg[2:0] nState, State;
+
+	always_ff @(posedge clk or posedge reset)
+		if(reset == 1) begin
+			State <= S0;
 		end
-	// next -state logic 
-	always @* 
-		begin 
-			if (en) 
-				Q_next = Q_reg + 1; 
-			else 
-				Q_next = Q_reg; // no change 
+		else begin
+			State <= nState;
 		end
-	// output logic 
-	assign count = Q_reg; 
-	assign tick = (Q_reg=={N{1'b1}}) ? 1'b1 : 1'b0;
-	endmodule // counter
+
+
+	always_comb begin
+		case(State)
+		S0: begin
+			y[0] = 1;
+			y[3:1] = 0;
+			lose = 1'b0;
+			win = 1'b0;
+			if(b==1)
+				nState = SWIN;
+			else if(b==0)
+				nState = S1;
+			else 
+				nState = SLOSE;
+			end
+
+		S1: begin
+			y[1] = 1;
+			y[0] = 0;
+			y[3:2] = 0;
+			if(b==2)
+				nState = SWIN;
+			else if(b==0)
+				nState = S2;
+			else 
+				nState = SLOSE;
+			end
+
+		S2: begin
+			y[2] = 1;
+			y[3] = 0;
+			y[1:0] = 0;
+			if(b==4)
+				nState = SWIN;
+			else if(b==0)
+				nState = S3;
+			else 
+				nState = SLOSE;
+			end
+
+			S3: begin
+				y[3] = 1;
+				y[2:0] = 0;
+				if(b==8)
+					nState = SWIN;
+				else if(b==0)
+					nState = S0;
+				else 
+					nState = SLOSE;
+				end
+
+				SWIN: begin
+					win = 1'b1;
+					lose = 1'b0;
+					if(b==0)
+						nState = S0;
+					else
+						nState = SWIN;
+					end
+
+				SLOSE: begin
+					lose = 1'b1;
+					win = 1'b0;
+					if(b==0)
+						nState = S0;
+					else
+						nState = SLOSE;
+					end
+				endcase
+			end   
+endmodule
 \end{lstlisting}
 
+
 \begin{lstlisting}[style=Verilog,
-caption=Counter Test Bench,
-label=Counter_test
+caption=guess FSM Test Bench,
+label=guess_FSM_test
 ]
-`timescale 1ns / 1ps
-//ELC 2137 Jake Simmons 2020-7-4
+`timescale 1ns / 1 ps
+//ELC 2137, Jake Simmons, 2020-04-21
+module guess_FSM_test();
 
-module counter_test();
-	reg clk, en, rst; 
-	wire [3:0] count;
-	wire tick;
+	reg clk, reset;
+	reg [3:0] b;
+	wire [3:0] y;
+	wire win, lose;
 
-	Counter #(.N(4)) count1( .tick(tick), .clk(clk), 
+	guess_FSM gs( .clk(clk), .b(b), .reset(reset), .y(y), .win(win),
+	.lose(lose) );
 
-	.en(en), .rst(rst), .count(count) );
-
-
-
-	// clock runs continuously 
-
-	always begin 
-
-		clk = ~clk; #5; 
-
+	always begin
+		clk = ~clk; #10;
 	end
-
-	// this block only runs once 
 
 	initial begin
+		clk = 0; reset = 0; b = 0; #10;
+		reset = 1; #10;
+		reset = 0; #10;
 
-		clk = 0; en = 0; rst = 0; #7;
-		rst = 1; #3; // reset 
-		en = 1; rst = 0; #10; 
-		en = 0; #5; 
-		en = 1; #3;
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #5; 
-		en = 1; #3;
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 0; #10; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3;
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
-		en = 1; #2; 
-		en = 0; #10; 
-		en = 1; #3; 
+		b = 0; #10; //S1
+		b = 0; #10; //S2
+		b = 0; #10; //S3
 
-	$finish;
+		b = 0; #10; //S0
+		b = 1; #20; //SWIN
+		b = 2; #10; //SWIN
+
+		b = 0; #10 //S0;
+		b = 2; #10; //SLOSE
+		b = 1; #10; //SLOSE
+
+		b = 0; #10; //S0
+		b = 0; #10; //S1
+		b = 2; #10; //SWIN
+		b = 2; #10; //SWIN
+
+		b = 0; #10; //S0
+		b = 0; #10; //S1
+		b = 1; #10; //SLOSE
+		b = 1; #10; //SLOSE
+
+		b = 0; #10; //S0
+		b = 0; #10; //S1
+		b = 0; #10; //S2
+		b = 4; #10; //SWIN
+		b = 2; #10; //SWIN
+		b = 0; #10; //S0
+		b = 0; #10; //S1
+		b = 0; #10; //S2
+		b = 1; #10; //SLOSE
+		b = 1; #10; //SLOSE
+		b = 0; #10; //S0
+
+		b = 0; #10; //S1
+		b = 0; #10; //S2
+		b = 0; #10; //S3
+		b = 8; #10; //SWIN
+		b = 2; #10; //SWIN
+		b = 0; #10; //S0
+		b = 0; #10; //S1
+		b = 0; #10; //S2
+		b = 0; #10; //S3
+		b = 1; #10; //SLOSE
+		b = 1; #10; //SLOSE
+		b = 0; #10; //S0
+
 
 	end
 endmodule
@@ -317,53 +372,73 @@ endmodule
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=sseg4TDM Module,
-label=sseg4TDM
+caption=guessing game Module,
+label=game
 ]
 `timescale 1ns / 1ps
-//ELC 2137 2020-4-7
+// ELC 2137, Jake Simmons, 2020-04-22
 
-module sseg4_TDM(
-	input clock,
-	input reset,
-	input [15:0] data,
-	input hex_dec,
-	input sign,
+module guessing_game(
+	input btnU,
+	input btnD,
+	input btnR,
+	input btnL,
+	input btnC,
+	input clk,
+	input [15:0]sw,
 	output [6:0] seg,
-	output dp,
-	output [3:0] an
+	output [3:0] an,
+	output [15:0] led,
+	output dp
 	);
-	
-	wire [1:0] digit_sel;    
-	wire [15:0] W1 ;
-	wire [15:0] W2 ;
-	wire [3:0] W3;
-	wire [6:0] W4;
-	wire [3:0] W5;
-	wire W6;    
+
+	wire [3:0] W1;
+	wire [1:0] W2;
+	wire [15:0] W3;
+	wire [3:0] W4;
+	wire W5, W6;
 	wire [1:0] W7;
 
-	Counter #(.N(18)) timer( .clk(clock), .en(1'b1), .tick(W7), .rst(reset));  
-	
-	Counter #(.N(2)) counter2( .clk(clock),.en(W7),.count(digit_sel), .rst(reset) );   
-	  
-	BCD11_2 B1( .in11(data[10:0]), .out11(W1));
-	
-	mux2 #(.N(16)) B2( .in0(data), .in1(W1), .sel(hex_dec), .out(W2));
-	
-	mux4 B3( .in0(W2[3:0]), .in1(W2[7:4]), .in2(W2[11:8]), .in3(W2[15:12]), .sel(digit_sel), .out(W3));
-	
-	sseg_decoder B5( .num(W3), .sseg(W4));
-	
-	mux2 #(.N(7)) B6( .in0(W4), .in1(7'b0111111), .out(seg) , .sel(W6));
-	
-	and G2( W6, sign, ~W5[3]);
-	
-	annode_decoder B7( .in(digit_sel), .out(W5));
+	debounce #(.N(21)) d1( .in(btnU), .clk(clk), .reset(btnC), .out(W1[3]));
+	debounce #(.N(21)) d2( .in(btnR), .clk(clk), .reset(btnC), .out(W1[2]));
+	debounce #(.N(21)) d3( .in(btnD), .clk(clk), .reset(btnC), .out(W1[1]));
+	debounce #(.N(21)) d4( .in(btnL), .clk(clk), .reset(btnC), .out(W1[0]));
 
-	assign dp = 1;
-	assign an = W5;
-endmodule
+	Counter #(.N(25)) count( .clk(clk), .en(1'b1), .tick(W2));
+	Counter #(.N(23)) count1( .clk(clk), .en(1'b1), .tick(W7));
+
+	mux2 #(.N(25)) m( .in1(W2), .in0(W7), .sel(sw[0]), .out(W3));
+
+	guess_FSM gFSM( .b(W1), .clk(W3), .y(W4), .win(W5), .lose(W6), .reset(btnC));
+
+	//top
+	assign seg[0] = ~W4[3];
+
+	//right
+	assign seg[1] = ~W4[2];
+
+	assign seg[4:2] = 3'b111;
+
+	//left
+	assign seg[5] = ~W4[0];
+
+	//bottom
+	assign seg[6] = ~W4[1];
+
+	//win
+	assign led[0] = W5;
+
+	//lose
+	assign led[1] = W6;
+
+
+	assign led[15:2] = 14'b00000000000000;
+	assign an = 4'b1110;
+
+	assign dp = 1'b1;
+
+	endmodule
+
 
 
 \end{lstlisting}
