@@ -60,7 +60,7 @@
 %=========== Body  ====================================
 \begin{document}
 
-\title{ELC 2137 Lab 10: 7-segment Display with Time-Division Multiplexing}
+\title{ELC 2137 Lab 11: FSM: Guessing Game}
 \author{Jake Simmons}
 
 \maketitle
@@ -74,22 +74,19 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 \section*{Q\&A}
 
 \begin{enumerate}
-		\item What are the three main “groups” of the RTL deﬁnition of sequential logic?
+		\item At what time in the simulation did the debounce circuit reach each of the four states?
 		\begin{enumerate}
-			\item 	The three main groups of the RTL definitions of sequential logic is event driven, clock driven and pulse driven. 
+			\item 	state zero: , state wait1: , state one: , state wait0: 
 		\end{enumerate}
 	
-	\item Copy Figure 10.3b onto your own paper (or do it electronically) and draw three boxes around the components that belong to each group. Include your annotated ﬁgure in your report.
-	
-	\begin{figure}[ht]\centering
-		\caption{10.3B Labeling}
-	%	\includegraphics[trim={8.8cm 5cm 0cm 14cm},clip]{10.3_b.pdf}
-		\label{fig:picture}
-	\end{figure}
+	\item Why can this game not be implemented with regular sequential logic?
+		\begin{enumerate}
+			\item 	state zero: , state wait1: , state one: , state wait0: 
+		\end{enumerate}
 
-	\item If instead of a counter, you wanted to make a shift register that moved the input bits from right to left (low to high). What would you put on the line Q next = /*???*/
+	\item What type of outputs did you use for your design(Mealy or Moore)? Explain.
 	\begin{enumerate}
-		\item To make a shift register that moved bits from right to left, you would put on the line Q next = Q reg - 1;
+		\item 
 	\end{enumerate}
 \end{enumerate}
 
@@ -165,18 +162,6 @@ The purpose of this lab was to learn how to use the technique called Time-Divisi
 	
 	\caption{guess FSM simulation waveform and ERT}
 	\label{fig:sim_with_table}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	\caption{sseg4TDM Schematic}
-%	\includegraphics[width=1.05\textwidth]{sseg4_TDM_Schematic.jpeg}
-	\label{fig:picture}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	\caption{calclab10 Schematic}
-%	\includegraphics[width=1.15 \textwidth]{calc_lab10_Schematic.jpeg}
-	\label{fig:picture}
 \end{figure}
 
 \clearpage
@@ -444,94 +429,56 @@ module guessing_game(
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption=sseg4TDM Test Bench,
-label=sseg4TDM Test
+caption=guessing game Test Bench,
+label=guessing game Test
 ]
 `timescale 1ns / 1ps
-//ELC 2137 2020-7-4
+//ELC 2137, Jake Simmons, 2020-04-22
 
-module sseg4_TDM_test();
-	reg clock;
-	reg reset;
-	reg [15:0] data;
-	reg hex_dec;
-	reg sign;
+module guessing_game_test();
+	reg btnU;
+	reg btnD;
+	reg btnR;
+	reg btnL;
+	reg btnC;
+	reg clk;
+	reg sw;
 	wire [6:0] seg;
-	wire dp;
 	wire [3:0] an;
+	wire [15:0] led; 
 
-	sseg4_TDM sseg4( .clock(clock), .reset(reset), .data(data), .hex_dec(hex_dec),
-	.sign(sign), .seg(seg), .dp(dp), .an(an));
+	guessing_game test( .btnU(btnU), .btnD(btnD), .btnR(btnR),
+	.btnL(btnL), .btnC(btnC), .clk(clk), .seg(seg), .an(an), 
+	.led(led));
 
-
-
-	// clock runs continuously 
-
-	always begin 
-
-		clock = ~clock; #10; 
-
+	always begin
+		clk = ~clk; #10;
 	end
-
-	// this block only runs once 
 
 	initial begin
-		data = 0; hex_dec = 0; reset = 1;  clock = 0; sign = 0; #2621440;
-		data = 1; hex_dec = 1; reset = 0;  sign = 0; #2621440;
-		data = 2; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 3; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 4; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 5; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 6; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 7; hex_dec = 1; reset = 0;  sign = 0;  #2621440;
-		data = 8; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
-		data = 9; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
-		data = 10; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
-		data = 11; hex_dec = 0; reset = 0;  sign = 1;  #2621440;
-		data = 12; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
-		data = 13; hex_dec = 1; reset = 0;  sign = 1;  #2621440;
-		data = 14; hex_dec = 0; reset = 0;  sign = 0;  #2621440;
-		data = 15; hex_dec = 0; reset = 0;  sign = 0;  #2621440;
-
-	$finish;
+		clk = 0; btnC = 0; btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnC = 1; #20;
+		btnC = 0; #20;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 0; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 0; #10;
+		btnU = 1; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 1; btnR = 0; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 1; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 1; sw = 1; #10;
+		btnU = 0; btnD = 0; btnR = 0; btnL = 0; sw = 1; #10;
 
 	end
 endmodule
-
-
-\end{lstlisting}
-
-\begin{lstlisting}[style=Verilog,
-caption=calclab10 Module,
-label=calclab10
-]
-
-`timescale 1ns / 1ps
-//ELC 2137 Jake Simmons 2020-4-8
-
-module calc_lab10(
-	input clk,
-	input btnU,
-	input btnD,
-	input [11:0] sw,
-	input btnC,
-	output [15:0] led,
-	output [6:0] seg,
-	output dp,
-	output [3:0] an
-	);
-	wire [7:0] W1;
-
-	sseg4_TDM disp_unit( .data({8'b00000000, W1}), .hex_dec(sw[15]),
-	.reset(btnC), .clock(clock), .sign(sw[14]), 
-	.seg(seg), .dp(dp), .an(an));
-
-	top_lab9 calc_unit( .btnU(btnU), .btnD(btnD), .sw(sw[11:0]),
-	.clk(clk), .btnC(btnC), .led(led) );
-
-	assign w1 = led[15:8];
-endmodule
-
 
 \end{lstlisting}
 

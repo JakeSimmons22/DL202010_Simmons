@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  23 APR 2020 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.29)  23 APR 2020 11:20
 entering extended mode
 **./Lab11_Report.tex
 (Lab11_Report.tex
@@ -454,35 +454,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 101.
+(Font)              <10.95> on input line 98.
 
-Overfull \hbox (33.91058pt too wide) in paragraph at lines 101--113
+Overfull \hbox (33.91058pt too wide) in paragraph at lines 98--110
  [][] 
  []
 
 <debounce_test.JPG, id=22, 758.58406pt x 128.48pt>
 File: debounce_test.JPG Graphic file (type jpg)
 <use debounce_test.JPG>
-Package pdftex.def Info: debounce_test.JPG  used on input line 114.
+Package pdftex.def Info: debounce_test.JPG  used on input line 111.
 (pdftex.def)             Requested size: 445.60268pt x 128.47968pt.
 File: debounce_test.JPG Graphic file (type jpg)
 <use debounce_test.JPG>
-Package pdftex.def Info: debounce_test.JPG  used on input line 115.
+Package pdftex.def Info: debounce_test.JPG  used on input line 112.
 (pdftex.def)             Requested size: 274.88654pt x 128.47968pt.
 
-Overfull \hbox (54.42728pt too wide) in paragraph at lines 121--133
+Overfull \hbox (54.42728pt too wide) in paragraph at lines 118--130
  [][] 
  []
 
 <guess_FSM_test.JPG, id=25, 440.14438pt x 126.97438pt>
 File: guess_FSM_test.JPG Graphic file (type jpg)
 <use guess_FSM_test.JPG>
-Package pdftex.def Info: guess_FSM_test.JPG  used on input line 135.
+Package pdftex.def Info: guess_FSM_test.JPG  used on input line 132.
 (pdftex.def)             Requested size: 212.52182pt x 126.97406pt.
 ! Undefined control sequence.
 <recently read> \midule 
                         
-l.156 		\midule
+l.153 		\midule
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -493,11 +493,11 @@ and I'll forget about whatever was undefined.
 <guessing_game_test.JPG, id=26, 692.5875pt x 204.26312pt>
 File: guessing_game_test.JPG Graphic file (type jpg)
 <use guessing_game_test.JPG>
-Package pdftex.def Info: guessing_game_test.JPG  used on input line 163.
+Package pdftex.def Info: guessing_game_test.JPG  used on input line 160.
 (pdftex.def)             Requested size: 436.51164pt x 204.26262pt.
 File: guessing_game_test.JPG Graphic file (type jpg)
 <use guessing_game_test.JPG>
-Package pdftex.def Info: guessing_game_test.JPG  used on input line 164.
+Package pdftex.def Info: guessing_game_test.JPG  used on input line 161.
 (pdftex.def)             Requested size: 280.02187pt x 204.26262pt.
 [3
 
@@ -516,58 +516,42 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 188.
+nput line 185.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 190.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 187.
  [7
 
 ] [8] [9] [10] [11]
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-476.
-
-("C:\Users\School\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-
-LaTeX Font Warning: Font shape `TS1/cmtt/bx/n' undefined
-(Font)              using `TS1/cmtt/m/n' instead
-(Font)              for symbol `textdollar' on input line 476.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 519.
-[12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 519.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 498.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 498.
  (Lab11_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 519.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 519.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 498.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 498.
 Package rerunfilecheck Info: File `Lab11_Report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9120 strings out of 481556
- 135535 string characters out of 2913401
- 726521 words of memory out of 3000000
- 23910 multiletter control sequences out of 15000+200000
- 537359 words of font info for 41 fonts, out of 3000000 for 9000
+ 9073 strings out of 481556
+ 134637 string characters out of 2913401
+ 747526 words of memory out of 3000000
+ 23878 multiletter control sequences out of 15000+200000
+ 537062 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,49p,1203b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\School\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\tctt1000.pk><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/School/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/School/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Sch
-ool/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
->
-Output written on Lab11_Report.pdf (12 pages, 758495 bytes).
+<C:/Users/School/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/School/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/School/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/School/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Lab11_Report.pdf (12 pages, 750825 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 324 named destinations out of 1000 (max. 500000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 313 named destinations out of 1000 (max. 500000)
  40 words of extra memory for PDF output out of 10000 (max. 10000000)
 
