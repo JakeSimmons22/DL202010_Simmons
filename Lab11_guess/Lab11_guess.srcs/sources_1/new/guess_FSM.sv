@@ -54,7 +54,7 @@ module guess_FSM (
                 nState = SWIN;
             else if(b==0)
                 nState = S2;
-            else
+            else 
                 nState = lose;
         end
         
@@ -66,7 +66,7 @@ module guess_FSM (
                 nState = SWIN;
             else if(b==0)
                 nState = S3;
-            else
+            else 
                 nState = SLOSE;
         end
         
@@ -77,7 +77,7 @@ module guess_FSM (
                 nState = SWIN;
             else if(b==0)
                 nState = S0;
-            else
+            else 
                 nState = SLOSE;
         end
         
