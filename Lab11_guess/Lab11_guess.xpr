@@ -77,7 +77,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/guess_FSM.sv">
-        <FileInfo>
+        <FileInfo RelPath="guess_FSM.sv">
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

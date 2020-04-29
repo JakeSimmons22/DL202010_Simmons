@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Apr 23 09:37:22 2020
+| Date         : Tue Apr 28 19:03:48 2020
 | Host         : DESKTOP-9OU7RV8 running 64-bit major release  (build 9200)
 | Command      : report_drc -file guessing_game_drc_opted.rpt -pb guessing_game_drc_opted.pb -rpx guessing_game_drc_opted.rpx
 | Design       : guessing_game
@@ -49,8 +49,8 @@ Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT count1/FSM_onehot_State[5]_i_1 is driving clock pin of 6 cells. This could lead to large hold time violations. Involved cells are:
-gFSM/FSM_onehot_State_reg[0], gFSM/FSM_onehot_State_reg[1], gFSM/FSM_onehot_State_reg[2], gFSM/FSM_onehot_State_reg[3], gFSM/FSM_onehot_State_reg[4], gFSM/FSM_onehot_State_reg[5]
+A LUT count1/FSM_sequential_state[1]_i_2 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+gFSM/FSM_sequential_state_reg[0], gFSM/FSM_sequential_state_reg[1]
 Related violations: <none>
 
 

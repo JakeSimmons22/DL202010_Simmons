@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Apr 23 09:37:32 2020
+| Date         : Tue Apr 28 19:03:51 2020
 | Host         : DESKTOP-9OU7RV8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file guessing_game_control_sets_placed.rpt
 | Design       : guessing_game
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     6 |
-| Unused register locations in slices containing registers |    18 |
+| Number of unique control sets                            |     3 |
+| Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,8 +35,6 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|      4 |            1 |
-|      6 |            2 |
 |    16+ |            2 |
 +--------+--------------+
 
@@ -47,8 +45,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              60 |           20 |
-| No           | No                    | Yes                    |              98 |           26 |
+| No           | No                    | No                     |              48 |           13 |
+| No           | No                    | Yes                    |              94 |           22 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -62,12 +60,9 @@ Table of Contents
 +-------------------------+---------------+------------------+------------------+----------------+
 |       Clock Signal      | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +-------------------------+---------------+------------------+------------------+----------------+
-|  gFSM/win_reg_i_1_n_0   |               |                  |                2 |              2 |
-|  gFSM/y_reg[3]_i_1_n_0  |               |                  |                2 |              4 |
-|  count1/Q_reg_reg[19]_0 |               | btnC_IBUF        |                3 |              6 |
-|  gFSM/nState            |               |                  |                3 |              6 |
+|  count1/Q_reg_reg[19]_0 |               | btnC_IBUF        |                1 |              2 |
 |  clk_IBUF_BUFG          |               |                  |               13 |             48 |
-|  clk_IBUF_BUFG          |               | btnC_IBUF        |               23 |             92 |
+|  clk_IBUF_BUFG          |               | btnC_IBUF        |               21 |             92 |
 +-------------------------+---------------+------------------+------------------+----------------+
 
 
